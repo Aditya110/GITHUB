@@ -1,0 +1,17 @@
+{
+    "inputMessageMetadata": {
+        "flowVariables": {
+            "ToCurrency": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "Input2"
+            },
+            "FromCurrency": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "input"
+            }
+        }
+    },
+    "outputMessageMetadata": {},
+    "id": "c9370361-8b07-4efb-8ac1-13733bc36bbe",
+    "version": "5.2.0.0"
+}

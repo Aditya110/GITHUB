@@ -1,0 +1,27 @@
+#%RAML 0.8
+---
+title: Mobile Banking API
+version: v0.1
+baseUri: http://whishworks-poc/api/
+
+/WeatherMap:
+ get:
+    description: Get the Details of Country based on Cities
+    queryParameters:
+           FromCurrency: 
+             displayName: FromCurrency
+             description: Provide CountryName to Convert the CurrencyFrom
+             required: true
+             type: String
+             example: EUR
+           ToCurrency:
+             displayName: ToCurrency
+             description: Provide CountryName to Convert the CurrencyTo
+             required: true
+             type: String
+             example: INR
+    responses:
+      200:
+        body:
+          application/xml:
+            example: !include whetherMap_details_example.xml

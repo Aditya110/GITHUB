@@ -1,0 +1,13 @@
+{
+    "inputMessageMetadata": {
+        "flowVariables": {
+            "CountryName": {
+                "connectorName": "#_custom_mule_metadata_type_#",
+                "typeId": "CountryName"
+            }
+        }
+    },
+    "outputMessageMetadata": {},
+    "id": "14160b97-6184-418d-864e-dd6e290efa83",
+    "version": "5.2.0.0"
+}
