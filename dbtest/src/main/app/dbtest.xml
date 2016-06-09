@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:metadata="http://www.mulesoft.org/schema/mule/metadata" xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd
+http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+    <http:listener-config name="HTTP_Listener_Configuration" host="localhost" port="8083" basePath="test" doc:name="HTTP Listener Configuration"/>
+    <http:listener-config name="HTTP_Listener_Configuration1" host="localhost" port="8085" basePath="test1" doc:name="HTTP Listener Configuration"/>
+    <flow name="dbtestFlow">
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/" doc:name="HTTP"/>
+        <mulexml:dom-to-xml-transformer doc:name="DOM to XML"/>
+        <dw:transform-message metadata:id="611c11e1-d1e1-482a-8b78-da034c9044f5" doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/xml
+---
+{
+	employees: {
+		employee: {
+			name: payload.employees.employee.name,
+			experience: payload.employees.employee.experience,
+			skills: {
+				(payload.employees.employee.skills.*skill map ((skill , indexOfSkill) -> {
+					skill: skill
+				}))
+			}
+		}
+	}
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <byte-array-to-string-transformer doc:name="Byte Array to String"/>
+        <string-to-byte-array-transformer doc:name="String to Byte Array"/>
+        <byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+        <foreach collection="#[payload.employees.employee.skills]" doc:name="For Each">
+            <logger message="Output is &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; #[payload.skill]" level="INFO" doc:name="Logger"/>
+        </foreach>
+    </flow>
+    <flow name="dbtestFlow1">
+        <http:listener config-ref="HTTP_Listener_Configuration1" path="/" doc:name="HTTP"/>
+        <mulexml:dom-to-xml-transformer doc:name="DOM to XML"/>
+        <dw:transform-message metadata:id="1d22eb98-b5e9-4788-99fc-8b5726834538" doc:name="Transform Message">
+            <dw:set-payload><![CDATA[%dw 1.0
+%output application/java
+---
+{
+	employee: [{
+		name: payload.employees.employee.name,
+		experience: payload.employees.employee.experience as :string,
+		skills: [{
+			skill: payload.employees.employee.skills.*skill[0]
+		}]++ payload.employees.employee.skills
+	}],
+	employees: [{
+		employee: [{
+			name: payload.employees.employee.name,
+			experience: payload.employees.employee.experience,
+			skills: payload.employees.employee.skills
+		}]
+	}]
+}]]></dw:set-payload>
+        </dw:transform-message>
+        <foreach collection="#[payload.]" doc:name="For Each">
+            <logger message="2nd Output is &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;. #[payload]" level="INFO" doc:name="Logger"/>
+            <db:no-operation-selected config-ref="" doc:name="Database"/>
+        </foreach>
+    </flow>
+</mule>

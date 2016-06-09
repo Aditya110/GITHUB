@@ -1,0 +1,17 @@
+import droolsTest.AccountDetailsResponseBO
+
+rule "rule_one"
+ when
+   		AccountDetailsResponseBO(accountType=="Saving")
+ then  
+		insert(new AccountDetailsResponseBO(eventContext.getMessage().getPayload())); 	
+		System.out.println("Into Saving Type");
+end
+
+rule "rule_two"
+ when
+   		AccountDetailsResponseBO(accountType=="Debit")
+ then  
+		insert(new AccountDetailsResponseBO(eventContext.getMessage().getPayload()));
+		System.out.println("Into Debit Type");
+end
