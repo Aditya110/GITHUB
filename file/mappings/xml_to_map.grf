@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="akuchan" created="Tue Aug 11 10:52:26 IST 2015" description="XML To Map" guiVersion="3.4.4.P" id="1439359743055" licenseCode="Unlicensed" licenseType="Unknown" modified="Tue Aug 11 10:52:26 IST 2015" modifiedBy="akuchan" name="XML_To_Map" preview-file="${Project_Home}/src/main/resources/navresponse.xml" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __filteredMetadata="false" __index="0" __referenceCounter="1" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}Create_ResultType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result" _dataStructure="OBJECT" _id="__id" _type="Input" id="eb48eb32-7138-40a9-9558-1f80bccfeb98">
+<Record fieldDelimiter="," name="Create_Result" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Key" containerType="SINGLE" label="Key" name="Key" type="string"/>
+<Field __index="1" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:No" containerType="SINGLE" label="No" name="No" type="string"/>
+<Field __index="2" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Name" containerType="SINGLE" label="Name" name="Name" type="string"/>
+<Field __index="3" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Search_Name" containerType="SINGLE" label="Search_Name" name="Search_Name" type="string"/>
+<Field __index="4" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Balance_LCY" containerType="SINGLE" label="Balance_LCY" name="Balance_LCY" type="integer"/>
+<Field __index="5" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Credit_Limit_LCY" containerType="SINGLE" label="Credit_Limit_LCY" name="Credit_Limit_LCY" type="integer"/>
+<Field __index="6" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Blocked" containerType="SINGLE" label="Blocked" name="Blocked" type="string"/>
+<Field __index="7" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Last_Date_Modified" containerType="SINGLE" label="Last_Date_Modified" name="Last_Date_Modified" type="date"/>
+<Field __index="8" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Invoice_Copies" containerType="SINGLE" label="Invoice_Copies" name="Invoice_Copies" type="integer"/>
+<Field __index="9" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Invoice_Disc_Code" containerType="SINGLE" label="Invoice_Disc_Code" name="Invoice_Disc_Code" type="string"/>
+<Field __index="10" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Copy_Sell_to_Addr_to_Qte_From" containerType="SINGLE" label="Copy_Sell_to_Addr_to_Qte_From" name="Copy_Sell_to_Addr_to_Qte_From" type="string"/>
+<Field __index="11" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Allow_Line_Disc" containerType="SINGLE" label="Allow_Line_Disc" name="Allow_Line_Disc" type="string"/>
+<Field __index="12" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Prices_Including_VAT" containerType="SINGLE" label="Prices_Including_VAT" name="Prices_Including_VAT" type="string"/>
+<Field __index="13" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Prepayment_Percent" containerType="SINGLE" label="Prepayment_Percent" name="Prepayment_Percent" type="integer"/>
+<Field __index="14" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Application_Method" containerType="SINGLE" label="Application_Method" name="Application_Method" type="string"/>
+<Field __index="15" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Partner_Type" containerType="SINGLE" label="Partner_Type" name="Partner_Type" type="string"/>
+<Field __index="16" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Print_Statements" containerType="SINGLE" label="Print_Statements" name="Print_Statements" type="string"/>
+<Field __index="17" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Last_Statement_No" containerType="SINGLE" label="Last_Statement_No" name="Last_Statement_No" type="integer"/>
+<Field __index="18" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Block_Payment_Tolerance" containerType="SINGLE" label="Block_Payment_Tolerance" name="Block_Payment_Tolerance" type="string"/>
+<Field __index="19" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Combine_Shipments" containerType="SINGLE" label="Combine_Shipments" name="Combine_Shipments" type="string"/>
+<Field __index="20" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Reserve" containerType="SINGLE" label="Reserve" name="Reserve" type="string"/>
+<Field __index="21" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Shipping_Advice" containerType="SINGLE" label="Shipping_Advice" name="Shipping_Advice" type="string"/>
+<Field __index="22" __schemaType="{urn:microsoft-dynamics-schemas/page/customercard}customercardType" __sourcePath="{urn:microsoft-dynamics-schemas/page/customercard=ns0}/ns0:Create_Result/ns0:customercard/ns0:Customized_Calendar" containerType="SINGLE" label="Customized_Calendar" name="Customized_Calendar" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/Create_x005fResult" _dataStructure="OBJECT" _id="__id" _type="Output" id="17c62d5d-8ef8-46fb-af66-11981cd90321">
+<Record fieldDelimiter="," name="Create_Result" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="11" __sourcePath="{}/Create_x005fResult/customercard/Allow_x005fLine_x005fDisc" containerType="SINGLE" label="Allow_Line_Disc" name="Allow_Line_Disc" type="string"/>
+<Field __index="14" __sourcePath="{}/Create_x005fResult/customercard/Application_x005fMethod" containerType="SINGLE" label="Application_Method" name="Application_Method" type="string"/>
+<Field __index="4" __sourcePath="{}/Create_x005fResult/customercard/Balance_x005fLCY" containerType="SINGLE" label="Balance_LCY" name="Balance_LCY" type="integer"/>
+<Field __index="18" __sourcePath="{}/Create_x005fResult/customercard/Block_x005fPayment_x005fTolerance" containerType="SINGLE" label="Block_Payment_Tolerance" name="Block_Payment_Tolerance" type="string"/>
+<Field __index="6" __sourcePath="{}/Create_x005fResult/customercard/Blocked" containerType="SINGLE" label="Blocked" name="Blocked" type="string"/>
+<Field __index="19" __sourcePath="{}/Create_x005fResult/customercard/Combine_x005fShipments" containerType="SINGLE" label="Combine_Shipments" name="Combine_Shipments" type="string"/>
+<Field __index="10" __sourcePath="{}/Create_x005fResult/customercard/Copy_x005fSell_x005fto_x005fAddr_x005fto_x005fQte_x005fFrom" containerType="SINGLE" label="Copy_Sell_to_Addr_to_Qte_From" name="Copy_Sell_to_Addr_to_Qte_From" type="string"/>
+<Field __index="5" __sourcePath="{}/Create_x005fResult/customercard/Credit_x005fLimit_x005fLCY" containerType="SINGLE" label="Credit_Limit_LCY" name="Credit_Limit_LCY" type="integer"/>
+<Field __index="22" __sourcePath="{}/Create_x005fResult/customercard/Customized_x005fCalendar" containerType="SINGLE" label="Customized_Calendar" name="Customized_Calendar" type="string"/>
+<Field __index="8" __sourcePath="{}/Create_x005fResult/customercard/Invoice_x005fCopies" containerType="SINGLE" label="Invoice_Copies" name="Invoice_Copies" type="integer"/>
+<Field __index="9" __sourcePath="{}/Create_x005fResult/customercard/Invoice_x005fDisc_x005fCode" containerType="SINGLE" label="Invoice_Disc_Code" name="Invoice_Disc_Code" type="string"/>
+<Field __index="0" __sourcePath="{}/Create_x005fResult/customercard/Key" containerType="SINGLE" label="Key" name="Key" type="string"/>
+<Field __index="7" __sourcePath="{}/Create_x005fResult/customercard/Last_x005fDate_x005fModified" containerType="SINGLE" label="Last_Date_Modified" name="Last_Date_Modified" type="date"/>
+<Field __index="17" __sourcePath="{}/Create_x005fResult/customercard/Last_x005fStatement_x005fNo" containerType="SINGLE" label="Last_Statement_No" name="Last_Statement_No" type="integer"/>
+<Field __index="2" __sourcePath="{}/Create_x005fResult/customercard/Name" containerType="SINGLE" label="Name" name="Name" type="string"/>
+<Field __index="1" __sourcePath="{}/Create_x005fResult/customercard/No" containerType="SINGLE" label="No" name="No" type="string"/>
+<Field __index="15" __sourcePath="{}/Create_x005fResult/customercard/Partner_x005fType" containerType="SINGLE" label="Partner_Type" name="Partner_Type" type="string"/>
+<Field __index="13" __sourcePath="{}/Create_x005fResult/customercard/Prepayment_x005fPercent" containerType="SINGLE" label="Prepayment_Percent" name="Prepayment_Percent" type="integer"/>
+<Field __index="12" __sourcePath="{}/Create_x005fResult/customercard/Prices_x005fIncluding_x005fVAT" containerType="SINGLE" label="Prices_Including_VAT" name="Prices_Including_VAT" type="string"/>
+<Field __index="16" __sourcePath="{}/Create_x005fResult/customercard/Print_x005fStatements" containerType="SINGLE" label="Print_Statements" name="Print_Statements" type="string"/>
+<Field __index="20" __sourcePath="{}/Create_x005fResult/customercard/Reserve" containerType="SINGLE" label="Reserve" name="Reserve" type="string"/>
+<Field __index="3" __sourcePath="{}/Create_x005fResult/customercard/Search_x005fName" containerType="SINGLE" label="Search_Name" name="Search_Name" type="string"/>
+<Field __index="21" __sourcePath="{}/Create_x005fResult/customercard/Shipping_x005fAdvice" containerType="SINGLE" label="Shipping_Advice" name="Shipping_Advice" type="string"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Foreach 'ns0:Create_Result' -&gt; 'Create_x005fResult'" guiX="460" guiY="20" id="FOREACH_NS0_CREATE_RESULT_CREATE_X005F_RESULT" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = input.__id;
+//END -> DO NOT REMOVE
+output.Key = input.Key;
+output.No = input.No;
+output.Name = input.Name;
+output.Search_Name = input.Search_Name;
+output.Balance_LCY = input.Balance_LCY;
+output.Credit_Limit_LCY = input.Credit_Limit_LCY;
+output.Blocked = input.Blocked;
+output.Last_Date_Modified = input.Last_Date_Modified;
+output.Invoice_Copies = input.Invoice_Copies;
+output.Invoice_Disc_Code = input.Invoice_Disc_Code;
+output.Copy_Sell_to_Addr_to_Qte_From = input.Copy_Sell_to_Addr_to_Qte_From;
+output.Allow_Line_Disc = input.Allow_Line_Disc;
+output.Prices_Including_VAT = input.Prices_Including_VAT;
+output.Prepayment_Percent = input.Prepayment_Percent;
+output.Application_Method = input.Application_Method;
+output.Partner_Type = input.Partner_Type;
+output.Print_Statements = input.Print_Statements;
+output.Last_Statement_No = input.Last_Statement_No;
+output.Block_Payment_Tolerance = input.Block_Payment_Tolerance;
+output.Combine_Shipments = input.Combine_Shipments;
+output.Reserve = input.Reserve;
+output.Shipping_Advice = input.Shipping_Advice;
+output.Customized_Calendar = input.Customized_Calendar;
+]]></attr>
+</Node>
+<Node cacheInMemory="true" enabled="enabled" fileURL="dict:outputPayload" guiName="Map&lt;k,v&gt; WRITER" guiX="900" guiY="20" id="MAP_WRITER0" type="MAP_WRITER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<clover:element clover:name="Create_Result" xmlns:clover="http://www.cloveretl.com/ns/xmlmapping" clover:inPort="0">
+  <customercard>
+    <Key>$0.Key</Key>
+    <No>$0.No</No>
+    <Name>$0.Name</Name>
+    <clover:element clover:name="Search_Name">$0.Search_Name</clover:element>
+    <clover:element clover:name="Balance_LCY">$0.Balance_LCY</clover:element>
+    <clover:element clover:name="Credit_Limit_LCY">$0.Credit_Limit_LCY</clover:element>
+    <Blocked>$0.Blocked</Blocked>
+    <clover:element clover:name="Last_Date_Modified">$0.Last_Date_Modified</clover:element>
+    <clover:element clover:name="Invoice_Copies">$0.Invoice_Copies</clover:element>
+    <clover:element clover:name="Invoice_Disc_Code">$0.Invoice_Disc_Code</clover:element>
+    <clover:element clover:name="Copy_Sell_to_Addr_to_Qte_From">$0.Copy_Sell_to_Addr_to_Qte_From</clover:element>
+    <clover:element clover:name="Allow_Line_Disc">$0.Allow_Line_Disc</clover:element>
+    <clover:element clover:name="Prices_Including_VAT">$0.Prices_Including_VAT</clover:element>
+    <clover:element clover:name="Prepayment_Percent">$0.Prepayment_Percent</clover:element>
+    <clover:element clover:name="Application_Method">$0.Application_Method</clover:element>
+    <clover:element clover:name="Partner_Type">$0.Partner_Type</clover:element>
+    <clover:element clover:name="Print_Statements">$0.Print_Statements</clover:element>
+    <clover:element clover:name="Last_Statement_No">$0.Last_Statement_No</clover:element>
+    <clover:element clover:name="Block_Payment_Tolerance">$0.Block_Payment_Tolerance</clover:element>
+    <clover:element clover:name="Combine_Shipments">$0.Combine_Shipments</clover:element>
+    <Reserve>$0.Reserve</Reserve>
+    <clover:element clover:name="Shipping_Advice">$0.Shipping_Advice</clover:element>
+    <clover:element clover:name="Customized_Calendar">$0.Customized_Calendar</clover:element>
+  </customercard>
+</clover:element>]]></attr>
+<attr name="_data_format"><![CDATA[MAP]]></attr>
+</Node>
+<Node charset="UTF-8" enabled="enabled" fileURL="dict:inputPayload" guiName="XML READER" guiX="20" guiY="20" id="XML_READER0" type="XML_READER">
+<attr name="xmlSchemaURL"><![CDATA[./src/test/resources/Create_Result.xsd]]></attr>
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" outPort="0" sequenceField="__id" xpath="/ns0:Create_Result">
+  <Mapping cloverField="Key" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Key"/>
+  <Mapping cloverField="No" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:No"/>
+  <Mapping cloverField="Name" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Name"/>
+  <Mapping cloverField="Search_Name" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Search_Name"/>
+  <Mapping cloverField="Balance_LCY" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Balance_LCY"/>
+  <Mapping cloverField="Credit_Limit_LCY" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Credit_Limit_LCY"/>
+  <Mapping cloverField="Blocked" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Blocked"/>
+  <Mapping cloverField="Last_Date_Modified" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Last_Date_Modified"/>
+  <Mapping cloverField="Invoice_Copies" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Invoice_Copies"/>
+  <Mapping cloverField="Invoice_Disc_Code" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Invoice_Disc_Code"/>
+  <Mapping cloverField="Copy_Sell_to_Addr_to_Qte_From" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Copy_Sell_to_Addr_to_Qte_From"/>
+  <Mapping cloverField="Allow_Line_Disc" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Allow_Line_Disc"/>
+  <Mapping cloverField="Prices_Including_VAT" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Prices_Including_VAT"/>
+  <Mapping cloverField="Prepayment_Percent" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Prepayment_Percent"/>
+  <Mapping cloverField="Application_Method" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Application_Method"/>
+  <Mapping cloverField="Partner_Type" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Partner_Type"/>
+  <Mapping cloverField="Print_Statements" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Print_Statements"/>
+  <Mapping cloverField="Last_Statement_No" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Last_Statement_No"/>
+  <Mapping cloverField="Block_Payment_Tolerance" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Block_Payment_Tolerance"/>
+  <Mapping cloverField="Combine_Shipments" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Combine_Shipments"/>
+  <Mapping cloverField="Reserve" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Reserve"/>
+  <Mapping cloverField="Shipping_Advice" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Shipping_Advice"/>
+  <Mapping cloverField="Customized_Calendar" namespacePaths="ns0=&quot;urn:microsoft-dynamics-schemas/page/customercard&quot;" trim="true" xpath="ns0:customercard/ns0:Customized_Calendar"/>
+</Context>
+]]></attr>
+<attr name="_data_format"><![CDATA[XML]]></attr>
+<attr name="__rootGlobalElementName"><![CDATA[{urn:microsoft-dynamics-schemas/page/customercard}Create_Result]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="FOREACH_NS0_CREATE_RESULT_CREATE_X005F_RESULT:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="17c62d5d-8ef8-46fb-af66-11981cd90321" outPort="Port 0 (out)" toNode="MAP_WRITER0:0"/>
+<Edge debugMode="true" fromNode="XML_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="eb48eb32-7138-40a9-9558-1f80bccfeb98" outPort="Port 0 (out)" toNode="FOREACH_NS0_CREATE_RESULT_CREATE_X005F_RESULT:0"/>
+</Phase>
+</Graph>

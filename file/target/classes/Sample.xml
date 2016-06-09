@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:mulexml="http://www.mulesoft.org/schema/mule/xml"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:file="http://www.mulesoft.org/schema/mule/file"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.5.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/xml http://www.mulesoft.org/schema/mule/xml/current/mule-xml.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+   
+<file:connector name="File_Global" autoDelete="false" streaming="true" validateConnections="true" doc:name="File" />
+
+<mulexml:namespace-manager includeConfigNamespaces="true">
+   <mulexml:namespace prefix="gco" uri="http://checkout.google.com/schema/2"/>
+  </mulexml:namespace-manager>
+
+<flow name="aaFlow1" doc:name="aaFlow1">
+   <file:inbound-endpoint responseTimeout="10000" connector-ref="File_Global" doc:name="File"  path="src/main/resources/input" moveToDirectory="src/main/resources/output">
+          <file:filename-regex-filter pattern="input.xml" caseSensitive="false"/>
+  </file:inbound-endpoint>
+
+<logger message="Trying to process : #[xpath('/gco:deliver-order/gco:tracking-data/gco:carrier').text]" level="INFO" doc:name="Logger"/> <!--Print the value of carrier -->
+
+<choice doc:name="Choice">
+  <when expression="#[xpath('/gco:deliver-order/gco:tracking-data/gco:carrier')]">
+   <processor-chain doc:name="Processor Chain">
+     <logger message="MATCHED" level="INFO" doc:name="Logger" />
+  </processor-chain>
+</when>
+<otherwise>
+   <processor-chain doc:name="Processor Chain">
+ <logger message="NO MATCH" level="INFO" doc:name="Logger" />
+ </processor-chain>
+</otherwise>
+</choice>
+</flow> 
+<!-- <flow name="testFlow1" doc:name="testFlow1">
+    <file:inbound-endpoint path="C:\Data\Mule\deploy\out" responseTimeout="10000" doc:name="File"/>
+    <file:file-to-string-transformer doc:name="File to String"/>
+    <logger message="*********First Message - *********   #[message.payload.toString()]" level="ERROR" doc:name="Logger"/>
+    <foreach collection="#[xpath('/XML/Result/Surveys/element')]" doc:name="For Each">
+            <set-variable doc:name="Variable" value="#[xpath('SurveyID/text()').text]" variableName="id"/>
+            <logger level="INFO" message="#[flowVars['id']]" doc:name="Logger"/>
+        </foreach>
+</flow> -->
+</mule>

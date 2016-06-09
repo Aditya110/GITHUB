@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="urn:microsoft-dynamics-schemas/page/customercard" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Create_Result" type="cus:Create_ResultType" xmlns:cus="urn:microsoft-dynamics-schemas/page/customercard"/>
+  <xs:complexType name="customercardType">
+    <xs:sequence>
+      <xs:element type="xs:string" name="Key"/>
+      <xs:element type="xs:string" name="No"/>
+      <xs:element type="xs:string" name="Name"/>
+      <xs:element type="xs:string" name="Search_Name"/>
+      <xs:element type="xs:byte" name="Balance_LCY"/>
+      <xs:element type="xs:byte" name="Credit_Limit_LCY"/>
+      <xs:element type="xs:string" name="Blocked"/>
+      <xs:element type="xs:date" name="Last_Date_Modified"/>
+      <xs:element type="xs:byte" name="Invoice_Copies"/>
+      <xs:element type="xs:string" name="Invoice_Disc_Code"/>
+      <xs:element type="xs:string" name="Copy_Sell_to_Addr_to_Qte_From"/>
+      <xs:element type="xs:string" name="Allow_Line_Disc"/>
+      <xs:element type="xs:string" name="Prices_Including_VAT"/>
+      <xs:element type="xs:byte" name="Prepayment_Percent"/>
+      <xs:element type="xs:string" name="Application_Method"/>
+      <xs:element type="xs:string" name="Partner_Type"/>
+      <xs:element type="xs:string" name="Print_Statements"/>
+      <xs:element type="xs:byte" name="Last_Statement_No"/>
+      <xs:element type="xs:string" name="Block_Payment_Tolerance"/>
+      <xs:element type="xs:string" name="Combine_Shipments"/>
+      <xs:element type="xs:string" name="Reserve"/>
+      <xs:element type="xs:string" name="Shipping_Advice"/>
+      <xs:element type="xs:string" name="Customized_Calendar"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Create_ResultType">
+    <xs:sequence>
+      <xs:element type="cus:customercardType" name="customercard" xmlns:cus="urn:microsoft-dynamics-schemas/page/customercard"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

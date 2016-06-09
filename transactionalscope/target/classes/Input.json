@@ -1,0 +1,40 @@
+{
+  "colorsArray": [
+    {
+      "red": "No",
+      "green": "No",
+      "blue": "No",
+      "cyan": "No",
+      "magenta": "No",
+      "yellow": "No",
+      "black": "No"
+    },
+    {
+      "red": "yes",
+      "green": "yes",
+      "blue": "yes",
+      "cyan": "yes",
+      "magenta": "yes",
+      "yellow": "yes",
+      "black": "yes"
+    },
+    {
+      "red": "Maybe",
+      "green": "Maybe",
+      "blue": "",
+      "cyan": "Maybe",
+      "magenta": "",
+      "yellow": "",
+      "black": "Maybe"
+    },
+    {
+      "red": "yes",
+      "green": "yes",
+      "blue": "yes",
+      "cyan": "yes",
+      "magenta": "yes",
+      "yellow": "yes",
+      "black": "yes"
+    }
+  ]
+}

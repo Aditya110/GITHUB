@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="akuchan" created="Wed Aug 12 15:35:48 IST 2015" description="JSON To Map" guiVersion="3.4.4.P" id="1439380385559" licenseCode="Unlicensed" licenseType="Unknown" modified="Wed Aug 12 15:35:48 IST 2015" modifiedBy="akuchan" name="JSON_To_Map" preview-file="${Project_Home}/src/main/resources/Input.json" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object/colorsArray" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="2379109d-214b-42c0-9825-47570dbadf5c" _parent_id="__parent_id" _type="Input" id="2256f720-aaa7-4adb-8eea-74f98efe2aa0">
+<Record fieldDelimiter="," name="colorsArray" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{}/object/colorsArray/red" containerType="SINGLE" label="red" name="red" type="string"/>
+<Field __index="1" __sourcePath="{}/object/colorsArray/green" containerType="SINGLE" label="green" name="green" type="string"/>
+<Field __index="2" __sourcePath="{}/object/colorsArray/blue" containerType="SINGLE" label="blue" name="blue" type="string"/>
+<Field __index="3" __sourcePath="{}/object/colorsArray/cyan" containerType="SINGLE" label="cyan" name="cyan" type="string"/>
+<Field __index="4" __sourcePath="{}/object/colorsArray/magenta" containerType="SINGLE" label="magenta" name="magenta" type="string"/>
+<Field __index="5" __sourcePath="{}/object/colorsArray/yellow" containerType="SINGLE" label="yellow" name="yellow" type="string"/>
+<Field __index="6" __sourcePath="{}/object/colorsArray/black" containerType="SINGLE" label="black" name="black" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object/colorsArray" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="927188c0-69d2-4139-bc03-3229ceb187b8" _parent_id="__parent_id" _type="Output" id="bb4e67d9-6591-4ca0-b801-e24aa1f4805f">
+<Record fieldDelimiter="," name="colorsArray" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="6" __sourcePath="{}/object/colorsArray/black" containerType="SINGLE" label="black" name="black" type="string"/>
+<Field __index="2" __sourcePath="{}/object/colorsArray/blue" containerType="SINGLE" label="blue" name="blue" type="string"/>
+<Field __index="3" __sourcePath="{}/object/colorsArray/cyan" containerType="SINGLE" label="cyan" name="cyan" type="string"/>
+<Field __index="1" __sourcePath="{}/object/colorsArray/green" containerType="SINGLE" label="green" name="green" type="string"/>
+<Field __index="4" __sourcePath="{}/object/colorsArray/magenta" containerType="SINGLE" label="magenta" name="magenta" type="string"/>
+<Field __index="0" __sourcePath="{}/object/colorsArray/red" containerType="SINGLE" label="red" name="red" type="string"/>
+<Field __index="5" __sourcePath="{}/object/colorsArray/yellow" containerType="SINGLE" label="yellow" name="yellow" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Input" id="2379109d-214b-42c0-9825-47570dbadf5c">
+<Record fieldDelimiter="," name="object" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Output" id="927188c0-69d2-4139-bc03-3229ceb187b8">
+<Record fieldDelimiter="," name="object" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+<Entry dictval.__javaType="java.lang.String" id="DictionaryEntry2" input="false" name="red" output="true" type="string"/>
+<Entry dictval.__javaType="java.lang.String" id="DictionaryEntry3" input="false" name="green" output="true" type="string"/>
+<Entry dictval.__javaType="java.lang.String" id="DictionaryEntry4" input="false" name="blue" output="true" type="string"/>
+<Entry dictval.__javaType="java.lang.String" id="DictionaryEntry5" input="false" name="cyan" output="true" type="string"/>
+<Entry dictval.__javaType="java.lang.String" id="DictionaryEntry6" input="false" name="magenta" output="true" type="string"/>
+<Entry dictval.__javaType="java.lang.String" id="DictionaryEntry7" input="false" name="yellow" output="true" type="string"/>
+<Entry dictval.__javaType="java.lang.String" id="DictionaryEntry8" input="false" name="black" output="true" type="string"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Foreach 'colorsArray' -&gt; 'colorsArray'" guiX="460" guiY="120" id="FOREACH_COLORS_ARRAY_COLORS_ARRAY" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = input.__id;
+output.__parent_id = input.__parent_id;
+//END -> DO NOT REMOVE
+output.red = input.red;
+output.green = input.green;
+output.blue = input.blue;
+output.cyan = input.cyan;
+output.magenta = input.magenta;
+output.yellow = input.yellow;
+output.black = input.black;
+outputArguments.red = input.red;
+outputArguments.green = input.green;
+outputArguments.blue = input.blue;
+outputArguments.cyan = input.cyan;
+outputArguments.magenta = input.magenta;
+outputArguments.yellow = input.yellow;
+outputArguments.black = input.black;]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Foreach 'object' -&gt; 'object'" guiX="460" guiY="20" id="FOREACH_OBJECT_OBJECT" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = input.__id;
+//END -> DO NOT REMOVE
+]]></attr>
+</Node>
+<Node charset="UTF-8" enabled="enabled" fileURL="dict:inputPayload" guiName="JSON READER" guiX="20" guiY="20" id="JSON_READER0" type="JSON_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context xpath="/root">
+  <Context outPort="0" sequenceField="__id" xpath="object">
+    <Context generatedKey="__parent_id" outPort="1" parentKey="__id" sequenceField="__id" xpath="colorsArray">
+      <Mapping cloverField="red" trim="true" xpath="red"/>
+      <Mapping cloverField="green" trim="true" xpath="green"/>
+      <Mapping cloverField="blue" trim="true" xpath="blue"/>
+      <Mapping cloverField="cyan" trim="true" xpath="cyan"/>
+      <Mapping cloverField="magenta" trim="true" xpath="magenta"/>
+      <Mapping cloverField="yellow" trim="true" xpath="yellow"/>
+      <Mapping cloverField="black" trim="true" xpath="black"/>
+    </Context>
+  </Context>
+</Context>
+]]></attr>
+<attr name="__isJsonSchema"><![CDATA[false]]></attr>
+<attr name="_data_format"><![CDATA[JSON]]></attr>
+<attr name="jsonSchemaURL"><![CDATA[./src/main/resources/Input.json]]></attr>
+</Node>
+<Node cacheInMemory="true" enabled="enabled" fileURL="dict:outputPayload" guiName="Map&lt;k,v&gt; WRITER" guiX="900" guiY="20" id="MAP_WRITER0" type="MAP_WRITER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<object xmlns:clover="http://www.cloveretl.com/ns/xmlmapping" clover:inPort="0">
+  <clover:collection clover:name="colorsArray">
+    <item clover:inPort="1" clover:key="__parent_id" clover:parentKey="__id">
+      <red>$1.red</red>
+      <green>$1.green</green>
+      <blue>$1.blue</blue>
+      <cyan>$1.cyan</cyan>
+      <magenta>$1.magenta</magenta>
+      <yellow>$1.yellow</yellow>
+      <black>$1.black</black>
+    </item>
+  </clover:collection>
+</object>]]></attr>
+<attr name="_data_format"><![CDATA[MAP]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="FOREACH_COLORS_ARRAY_COLORS_ARRAY:0" guiBendpoints="" id="Edge3" inPort="Port 1 (in)" metadata="bb4e67d9-6591-4ca0-b801-e24aa1f4805f" outPort="Port 0 (out)" toNode="MAP_WRITER0:1"/>
+<Edge debugMode="true" fromNode="FOREACH_OBJECT_OBJECT:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="927188c0-69d2-4139-bc03-3229ceb187b8" outPort="Port 0 (out)" toNode="MAP_WRITER0:0"/>
+<Edge debugMode="true" fromNode="JSON_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="2379109d-214b-42c0-9825-47570dbadf5c" outPort="Port 0 (out)" toNode="FOREACH_OBJECT_OBJECT:0"/>
+<Edge debugMode="true" fromNode="JSON_READER0:1" guiBendpoints="" id="Edge2" inPort="Port 0 (in)" metadata="2256f720-aaa7-4adb-8eea-74f98efe2aa0" outPort="Port 1 (out)" toNode="FOREACH_COLORS_ARRAY_COLORS_ARRAY:0"/>
+</Phase>
+</Graph>

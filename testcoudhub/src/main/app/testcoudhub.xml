@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.5.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
+    <flow name="testcoudhubFlow" doc:name="testcoudhubFlow">
+        <poll doc:name="Poll">
+            <logger message="test cloud" level="INFO" doc:name="Logger"/>
+        </poll>
+        <set-payload value="Start pooling#[server.dateTime.format('dd/MM/yyyy')]" doc:name="Set Payload"/>
+        <set-variable variableName="testVariable" value="#['flow Variable']" doc:name="Variable"/>
+        <logger message="#[message]" level="INFO" doc:name="Logger"/>
+    </flow>
+</mule>
