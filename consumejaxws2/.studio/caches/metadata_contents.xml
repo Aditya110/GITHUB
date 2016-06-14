@@ -1,0 +1,83 @@
+<?xml version="1.0" ?><org.mule.tooling.metadata.cache.MetadataCache><version>3.5.0.05</version><projectMetadataCache><entry><string>Web_Service_Consumer</string><map><entry><string>sayHi</string><map><entry><string>__default__</string><org.mule.tooling.metadata.cache.MetadataCache_-DefaultMetadataCacheEntry><input class="org.mule.common.metadata.DefaultMetaData"><payload class="org.mule.common.metadata.DefaultXmlMetaDataModel"><dataType>XML</dataType><metaDataModelPropertiesManager><properties><org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty></org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty></properties></metaDataModelPropertiesManager><fields></fields><schemas class="org.mule.common.metadata.StringBasedSchemaProvider"><schemas class="java.util.Arrays$ArrayList"><a class="string-array"><string>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://samplejax.se.mulesoft.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://samplejax.se.mulesoft.com/" version="1.0"&gt;
+
+&lt;xs:element name="ResponseJax" type="tns:responseType"/&gt;
+
+&lt;xs:element name="sayHi" type="tns:sayHi"/&gt;
+
+&lt;xs:element name="sayHiResponse" type="tns:sayHiResponse"/&gt;
+
+
+&lt;xs:complexType name="sayHi"&gt;
+
+&lt;xs:sequence/&gt;
+
+&lt;/xs:complexType&gt;
+
+
+&lt;xs:complexType name="sayHiResponse"&gt;
+
+
+&lt;xs:sequence&gt;
+
+&lt;xs:element minOccurs="0" name="return" type="tns:responseType"/&gt;
+
+&lt;/xs:sequence&gt;
+
+&lt;/xs:complexType&gt;
+
+
+&lt;xs:complexType name="responseType"&gt;
+
+
+&lt;xs:sequence&gt;
+
+&lt;xs:element minOccurs="0" name="EmpName" type="xs:string"/&gt;
+
+&lt;xs:element minOccurs="0" name="EmpId" type="xs:string"/&gt;
+
+&lt;/xs:sequence&gt;
+
+&lt;/xs:complexType&gt;
+
+&lt;/xs:schema&gt;</string></a></schemas><encoding>windows-1252</encoding><baseUri>file:/C:/Users/akuchan/AnypointStudio/workspace/consumejaxws2/src/main/resources/tshirt.wsdl</baseUri></schemas><rootElement><namespaceURI>http://samplejax.se.mulesoft.com/</namespaceURI><localPart>sayHi</localPart><prefix></prefix></rootElement></payload><properties><entry><org.mule.common.metadata.MetaDataPropertyScope>SESSION</org.mule.common.metadata.MetaDataPropertyScope><org.mule.common.metadata.MetaDataProperties><fields></fields></org.mule.common.metadata.MetaDataProperties></entry><entry><org.mule.common.metadata.MetaDataPropertyScope>RECORD</org.mule.common.metadata.MetaDataPropertyScope><org.mule.common.metadata.MetaDataProperties><fields></fields></org.mule.common.metadata.MetaDataProperties></entry><entry><org.mule.common.metadata.MetaDataPropertyScope>OUTBOUND</org.mule.common.metadata.MetaDataPropertyScope><org.mule.common.metadata.MetaDataProperties><fields></fields></org.mule.common.metadata.MetaDataProperties></entry><entry><org.mule.common.metadata.MetaDataPropertyScope>FLOW</org.mule.common.metadata.MetaDataPropertyScope><org.mule.common.metadata.MetaDataProperties><fields></fields></org.mule.common.metadata.MetaDataProperties></entry><entry><org.mule.common.metadata.MetaDataPropertyScope>INBOUND</org.mule.common.metadata.MetaDataPropertyScope><org.mule.common.metadata.MetaDataProperties><fields></fields></org.mule.common.metadata.MetaDataProperties></entry></properties></input><output class="org.mule.common.metadata.DefaultMetaData"><payload class="org.mule.common.metadata.DefaultXmlMetaDataModel"><dataType>XML</dataType><metaDataModelPropertiesManager><properties><org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty></org.mule.common.metadata.property.TextBasedExampleMetaDataModelProperty></properties></metaDataModelPropertiesManager><fields><org.mule.common.metadata.DefaultMetaDataField><name>return</name><model class="org.mule.common.metadata.DefaultXmlMetaDataModel"><dataType>XML</dataType><metaDataModelPropertiesManager><properties></properties></metaDataModelPropertiesManager><fields><org.mule.common.metadata.DefaultMetaDataField><name>EmpName</name><model class="org.mule.common.metadata.DefaultSimpleMetaDataModel"><dataType>STRING</dataType><metaDataModelPropertiesManager><properties></properties></metaDataModelPropertiesManager></model><accessType>READ_WRITE</accessType><metaDataFieldPropertyManager><properties><org.mule.common.metadata.property.QNameMetaDataProperty><name><namespaceURI></namespaceURI><localPart>EmpName</localPart><prefix></prefix></name></org.mule.common.metadata.property.QNameMetaDataProperty></properties></metaDataFieldPropertyManager></org.mule.common.metadata.DefaultMetaDataField><org.mule.common.metadata.DefaultMetaDataField><name>EmpId</name><model class="org.mule.common.metadata.DefaultSimpleMetaDataModel"><dataType>STRING</dataType><metaDataModelPropertiesManager><properties></properties></metaDataModelPropertiesManager></model><accessType>READ_WRITE</accessType><metaDataFieldPropertyManager><properties><org.mule.common.metadata.property.QNameMetaDataProperty><name><namespaceURI></namespaceURI><localPart>EmpId</localPart><prefix></prefix></name></org.mule.common.metadata.property.QNameMetaDataProperty></properties></metaDataFieldPropertyManager></org.mule.common.metadata.DefaultMetaDataField></fields><schemas class="org.mule.common.metadata.StringBasedSchemaProvider"><schemas class="java.util.Arrays$ArrayList"><a class="string-array"><string>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://samplejax.se.mulesoft.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://samplejax.se.mulesoft.com/" version="1.0"&gt;
+
+&lt;xs:element name="ResponseJax" type="tns:responseType"/&gt;
+
+&lt;xs:element name="sayHi" type="tns:sayHi"/&gt;
+
+&lt;xs:element name="sayHiResponse" type="tns:sayHiResponse"/&gt;
+
+
+&lt;xs:complexType name="sayHi"&gt;
+
+&lt;xs:sequence/&gt;
+
+&lt;/xs:complexType&gt;
+
+
+&lt;xs:complexType name="sayHiResponse"&gt;
+
+
+&lt;xs:sequence&gt;
+
+&lt;xs:element minOccurs="0" name="return" type="tns:responseType"/&gt;
+
+&lt;/xs:sequence&gt;
+
+&lt;/xs:complexType&gt;
+
+
+&lt;xs:complexType name="responseType"&gt;
+
+
+&lt;xs:sequence&gt;
+
+&lt;xs:element minOccurs="0" name="EmpName" type="xs:string"/&gt;
+
+&lt;xs:element minOccurs="0" name="EmpId" type="xs:string"/&gt;
+
+&lt;/xs:sequence&gt;
+
+&lt;/xs:complexType&gt;
+
+&lt;/xs:schema&gt;</string></a></schemas><encoding reference="../../../../../../../input/payload/schemas/encoding"></encoding><baseUri>file:/C:/Users/akuchan/AnypointStudio/workspace/consumejaxws2/src/main/resources/tshirt.wsdl</baseUri></schemas><rootElement><namespaceURI>http://samplejax.se.mulesoft.com/</namespaceURI><localPart>sayHiResponse</localPart><prefix></prefix></rootElement></model><accessType>READ_WRITE</accessType><metaDataFieldPropertyManager><properties><org.mule.common.metadata.property.QNameMetaDataProperty><name><namespaceURI></namespaceURI><localPart>return</localPart><prefix></prefix></name></org.mule.common.metadata.property.QNameMetaDataProperty></properties></metaDataFieldPropertyManager></org.mule.common.metadata.DefaultMetaDataField></fields><schemas class="org.mule.common.metadata.StringBasedSchemaProvider"><schemas class="java.util.Arrays$ArrayList" reference="../../fields/org.mule.common.metadata.DefaultMetaDataField/model/schemas/schemas"></schemas><encoding reference="../../../../input/payload/schemas/encoding"></encoding><baseUri>file:/C:/Users/akuchan/AnypointStudio/workspace/consumejaxws2/src/main/resources/tshirt.wsdl</baseUri></schemas><rootElement reference="../fields/org.mule.common.metadata.DefaultMetaDataField/model/rootElement"></rootElement></payload><properties><entry><org.mule.common.metadata.MetaDataPropertyScope>SESSION</org.mule.common.metadata.MetaDataPropertyScope><org.mule.common.metadata.MetaDataProperties><fields></fields></org.mule.common.metadata.MetaDataProperties></entry><entry><org.mule.common.metadata.MetaDataPropertyScope>RECORD</org.mule.common.metadata.MetaDataPropertyScope><org.mule.common.metadata.MetaDataProperties><fields></fields></org.mule.common.metadata.MetaDataProperties></entry><entry><org.mule.common.metadata.MetaDataPropertyScope>OUTBOUND</org.mule.common.metadata.MetaDataPropertyScope><org.mule.common.metadata.MetaDataProperties><fields></fields></org.mule.common.metadata.MetaDataProperties></entry><entry><org.mule.common.metadata.MetaDataPropertyScope>FLOW</org.mule.common.metadata.MetaDataPropertyScope><org.mule.common.metadata.MetaDataProperties><fields></fields></org.mule.common.metadata.MetaDataProperties></entry><entry><org.mule.common.metadata.MetaDataPropertyScope>INBOUND</org.mule.common.metadata.MetaDataPropertyScope><org.mule.common.metadata.MetaDataProperties><fields></fields></org.mule.common.metadata.MetaDataProperties></entry></properties></output></org.mule.tooling.metadata.cache.MetadataCache_-DefaultMetadataCacheEntry></entry></map></entry></map></entry></projectMetadataCache></org.mule.tooling.metadata.cache.MetadataCache>

@@ -1,0 +1,16 @@
+[ {
+  "Name" : "Adi",
+  "Address" : "xyz",
+  "City" : "hyd",
+  "Pincode" : 513002
+}, {
+  "Name" : "Abc",
+  "Address" : "abc",
+  "City" : "hyd",
+  "Pincode" : 513006
+}, {
+  "Name" : "xyc",
+  "Address" : "pqr",
+  "City" : "pun",
+  "Pincode" : 413006
+} ]

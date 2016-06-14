@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="lpuvvala" created="Thu Apr 02 09:36:35 IST 2015" description="MS Excel To List&lt;Map&gt;" guiVersion="3.4.4.P" id="1427953406166" licenseCode="Unlicensed" licenseType="Unknown" modified="Thu Apr 02 09:36:35 IST 2015" modifiedBy="lpuvvala" name="MS_Excel_To_List_Map_" preview-file="${Project_Home}/src/main/resources/in.xlsx" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __referenceCounter="1" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _type="Input" id="19a41d7f-7309-407b-97b1-17648ed73810">
+<Record fieldDelimiter="," name="in" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __sourcePath="1/0" label="snum" name="snum" type="long"/>
+<Field __sourcePath="1/1" label="stuname" name="stuname" type="string"/>
+<Field __sourcePath="1/2" label="abc" name="abc" type="string"/>
+<Field __sourcePath="1/3" label="ph" name="ph" type="long"/>
+<Field __artificialType="_id" auto_filling="global_row_count" name="__id" type="long"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/Map" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _type="Output" id="9c9e30fd-3e2f-4656-b227-f3068236ecca">
+<Record fieldDelimiter="," name="Map" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __implementationClass="java.lang.String" __index="0" __sourcePath="{}/Map/abc" containerType="SINGLE" label="abc" name="abc" type="string"/>
+<Field __implementationClass="java.lang.String" __index="1" __sourcePath="{}/Map/stuname" containerType="SINGLE" label="stuname" name="stuname" type="string"/>
+<Field __implementationClass="java.lang.String" __index="2" __sourcePath="{}/Map/snum" containerType="SINGLE" label="snum" name="snum" type="string"/>
+<Field __implementationClass="java.lang.String" __index="3" __sourcePath="{}/Map/ph" containerType="SINGLE" label="ph" name="ph" type="string"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Foreach 'in' -&gt; 'Map'" guiX="460" guiY="20" id="FOREACH_IN_MAP" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = num2str(input.__id);
+//END -> DO NOT REMOVE
+output.snum = num2str(input.snum);
+output.stuname = input.stuname;
+output.abc = input.abc;
+output.ph = num2str(input.ph);
+]]></attr>
+</Node>
+<Node enabled="enabled" fileURL="dict:outputPayload" guiName="Map&lt;k,v&gt; WRITER" guiX="900" guiY="20" id="MAP_WRITER0" type="MAP_WRITER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<clover:collection clover:name="Map" xmlns:clover="http://www.cloveretl.com/ns/xmlmapping">
+  <item clover:inPort="0">
+    <abc clover:dataType="java.lang.String">$0.abc</abc>
+    <stuname clover:dataType="java.lang.String">$0.stuname</stuname>
+    <snum clover:dataType="java.lang.String">$0.snum</snum>
+    <ph clover:dataType="java.lang.String">$0.ph</ph>
+  </item>
+</clover:collection>]]></attr>
+<attr name="_data_format"><![CDATA[MAP]]></attr>
+<attr name="__metadata"><![CDATA[true]]></attr>
+</Node>
+<Node enabled="enabled" fileURL="dict:inputPayload" guiName="MS Excel READER" guiX="20" guiY="20" id="SPREADSHEET_READER0" type="SPREADSHEET_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+    <globalAttributes>
+        <orientation>VERTICAL</orientation>
+        <step>1</step>
+        <writeHeader>true</writeHeader>
+    </globalAttributes>
+    <defaultSkip>1</defaultSkip>
+    <headerGroups>
+        <headerGroup skip="1">
+            <cloverField>snum</cloverField>
+            <headerRanges>
+                <headerRange begin="A1"/>
+            </headerRanges>
+        </headerGroup>
+        <headerGroup skip="1">
+            <cloverField>stuname</cloverField>
+            <headerRanges>
+                <headerRange begin="B1"/>
+            </headerRanges>
+        </headerGroup>
+        <headerGroup skip="1">
+            <cloverField>abc</cloverField>
+            <headerRanges>
+                <headerRange begin="C1"/>
+            </headerRanges>
+        </headerGroup>
+        <headerGroup skip="1">
+            <cloverField>ph</cloverField>
+            <headerRanges>
+                <headerRange begin="D1"/>
+            </headerRanges>
+        </headerGroup>
+    </headerGroups>
+</mapping>
+]]></attr>
+<attr name="_data_format"><![CDATA[XLS]]></attr>
+<attr name="__dataSourceDefinition"><![CDATA[${Project_Home}/src/main/resources/in.xlsx]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="FOREACH_IN_MAP:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="9c9e30fd-3e2f-4656-b227-f3068236ecca" outPort="Port 0 (out)" toNode="MAP_WRITER0:0"/>
+<Edge debugMode="true" fromNode="SPREADSHEET_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="19a41d7f-7309-407b-97b1-17648ed73810" outPort="Port 0 (output)" toNode="FOREACH_IN_MAP:0"/>
+</Phase>
+</Graph>

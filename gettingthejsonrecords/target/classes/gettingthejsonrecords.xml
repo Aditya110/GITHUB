@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:jms="http://www.mulesoft.org/schema/mule/jms" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.5.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+    <jms:activemq-connector name="Active_MQ" username="admin" password="admin" brokerURL="tcp://localhost:61616" validateConnections="true" doc:name="Active MQ"/>
+    <data-mapper:config name="JSON_To_Map" transformationGraphPath="json_to_map_4.grf" doc:name="JSON_To_Map"/>
+    <flow name="gettingthejsonrecordsFlow1" doc:name="gettingthejsonrecordsFlow1">
+        <jms:inbound-endpoint doc:name="JMS" connector-ref="Active_MQ" queue="ResultJson"/>
+        <byte-array-to-object-transformer doc:name="Byte Array to Object"/>
+        <data-mapper:transform config-ref="JSON_To_Map" doc:name="JSON To Map"/>
+        <logger message="From data mapper&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;#[payload]" level="INFO" doc:name="Logger"/>
+        <foreach collection="#[payload.getWorkOrderDataResponse.client.workOrders.wo]" doc:name="For Each">
+            <logger message="#[payload.created_by_role]" level="INFO" doc:name="Logger"/>
+        </foreach>
+    </flow>
+</mule>

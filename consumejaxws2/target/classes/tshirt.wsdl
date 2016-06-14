@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<wsdl:definitions targetNamespace="http://samplejax.se.mulesoft.com/" name="HelloWorldService" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:tns="http://samplejax.se.mulesoft.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+
+
+<wsdl:types>
+
+
+<xs:schema targetNamespace="http://samplejax.se.mulesoft.com/" xmlns:tns="http://samplejax.se.mulesoft.com/" version="1.0" elementFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="ResponseJax" type="tns:responseType"/>
+
+<xs:element name="sayHi" type="tns:sayHi"/>
+
+<xs:element name="sayHiResponse" type="tns:sayHiResponse"/>
+
+
+<xs:complexType name="sayHi">
+
+<xs:sequence/>
+
+</xs:complexType>
+
+
+<xs:complexType name="sayHiResponse">
+
+
+<xs:sequence>
+
+<xs:element name="return" type="tns:responseType" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+
+<xs:complexType name="responseType">
+
+
+<xs:sequence>
+
+<xs:element name="EmpName" type="xs:string" minOccurs="0"/>
+
+<xs:element name="EmpId" type="xs:string" minOccurs="0"/>
+
+</xs:sequence>
+
+</xs:complexType>
+
+</xs:schema>
+
+</wsdl:types>
+
+
+<wsdl:message name="sayHiResponse">
+
+<wsdl:part name="parameters" element="tns:sayHiResponse"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:message name="sayHi">
+
+<wsdl:part name="parameters" element="tns:sayHi"> </wsdl:part>
+
+</wsdl:message>
+
+
+<wsdl:portType name="HelloService">
+
+
+<wsdl:operation name="sayHi">
+
+<wsdl:input name="sayHi" message="tns:sayHi"> </wsdl:input>
+
+<wsdl:output name="sayHiResponse" message="tns:sayHiResponse"> </wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:portType>
+
+
+<wsdl:binding name="HelloWorldServiceSoapBinding" type="tns:HelloService">
+
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+
+
+<wsdl:operation name="sayHi">
+
+<soap:operation style="document" soapAction=""/>
+
+
+<wsdl:input name="sayHi">
+
+<soap:body use="literal"/>
+
+</wsdl:input>
+
+
+<wsdl:output name="sayHiResponse">
+
+<soap:body use="literal"/>
+
+</wsdl:output>
+
+</wsdl:operation>
+
+</wsdl:binding>
+
+
+<wsdl:service name="HelloWorldService">
+
+
+<wsdl:port name="HelloServicePort" binding="tns:HelloWorldServiceSoapBinding">
+
+<soap:address location="http://localhost:8085/hello"/>
+
+</wsdl:port>
+
+</wsdl:service>
+
+</wsdl:definitions>

@@ -1,0 +1,96 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="object">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="getWorkOrderData_response">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="description"/>
+              <xs:element type="xs:string" name="copyright"/>
+              <xs:element type="xs:string" name="date_processed"/>
+              <xs:element type="xs:anyURI" name="request_url"/>
+              <xs:element name="response">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="service_name"/>
+                    <xs:element type="xs:string" name="file_type"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="client">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="name"/>
+                    <xs:element type="xs:int" name="client_id"/>
+                    <xs:element type="xs:string" name="wo_status"/>
+                    <xs:element type="xs:int" name="wo_create_date"/>
+                    <xs:element type="xs:string" name="include_asset_detail"/>
+                    <xs:element type="xs:string" name="include_site_detail"/>
+                    <xs:element type="xs:string" name="include_ppm_wo"/>
+                    <xs:element type="xs:string" name="include_ppm_activities"/>
+                    <xs:element type="xs:string" name="include_sla_dates"/>
+                    <xs:element type="xs:string" name="include_work_permissions"/>
+                    <xs:element type="xs:string" name="timezone"/>
+                    <xs:element name="wo_footer">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element type="xs:byte" name="record_count"/>
+                          <xs:element type="xs:float" name="total_millis"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="work_orders">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="wo" maxOccurs="unbounded" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:int" name="work_order_number"/>
+                                <xs:element type="xs:string" name="date_created"/>
+                                <xs:element type="xs:string" name="created_by"/>
+                                <xs:element type="xs:string" name="created_by_login_id"/>
+                                <xs:element type="xs:string" name="date_modified"/>
+                                <xs:element type="xs:string" name="modified_by"/>
+                                <xs:element type="xs:string" name="modified_by_login_id"/>
+                                <xs:element type="xs:string" name="created_by_role"/>
+                                <xs:element type="xs:short" name="site_name"/>
+                                <xs:element type="xs:string" name="problem_description"/>
+                                <xs:element type="xs:string" name="category"/>
+                                <xs:element type="xs:string" name="subcategory"/>
+                                <xs:element type="xs:string" name="problem_type"/>
+                                <xs:element type="xs:string" name="workorder_type"/>
+                                <xs:element type="xs:string" name="location"/>
+                                <xs:element type="xs:string" name="equip_location_comments" minOccurs="0"/>
+                                <xs:element type="xs:string" name="contract_type"/>
+                                <xs:element type="xs:string" name="work_permission_required"/>
+                                <xs:element type="xs:string" name="provider_name"/>
+                                <xs:element type="xs:string" name="requester_name"/>
+                                <xs:element type="xs:string" name="call_back_number" minOccurs="0"/>
+                                <xs:element type="xs:string" name="temporary_fix"/>
+                                <xs:element type="xs:string" name="temp_fix_estimate"/>
+                                <xs:element type="xs:string" name="wo_status"/>
+                                <xs:element type="xs:string" name="provider_type"/>
+                                <xs:element type="xs:string" name="operational_status"/>
+                                <xs:element type="xs:string" name="latest_note"/>
+                                <xs:element type="xs:string" name="latest_inbound_call"/>
+                                <xs:element type="xs:string" name="is_recalled"/>
+                                <xs:element type="xs:string" name="date_assigned"/>
+                                <xs:element type="xs:string" name="eta"/>
+                                <xs:element type="xs:int" name="client_account_code"/>
+                                <xs:element type="xs:string" name="client_account_description"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

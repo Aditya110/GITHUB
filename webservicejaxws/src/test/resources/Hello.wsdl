@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://org.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="HelloWorld" targetNamespace="http://org.com/">
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://org.com" attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://org.com">
+			<xsd:complexType name="ResponseType">
+				<xsd:sequence>
+					<xsd:element minOccurs="0" name="EmpId" type="xsd:string"/>
+					<xsd:element minOccurs="0" name="EmpName" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://org.com/" xmlns:ns0="http://org.com" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://org.com/">
+			<xsd:import namespace="http://org.com"/>
+			<xsd:element name="sayHi" type="tns:sayHi"/>
+			<xsd:complexType name="sayHi">
+				<xsd:sequence/>
+			</xsd:complexType>
+			<xsd:element name="sayHiResponse" type="tns:sayHiResponse"/>
+			<xsd:complexType name="sayHiResponse">
+				<xsd:sequence>
+					<xsd:element minOccurs="0" name="return" type="ns0:ResponseType"/>
+				</xsd:sequence>
+			</xsd:complexType>
+		</xsd:schema>
+	</wsdl:types>
+	<wsdl:message name="sayHi">
+		<wsdl:part element="tns:sayHi" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="sayHiResponse">
+		<wsdl:part element="tns:sayHiResponse" name="parameters">
+		</wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="HelloWorldPortType">
+		<wsdl:operation name="sayHi">
+			<wsdl:input message="tns:sayHi" name="sayHi">
+			</wsdl:input>
+			<wsdl:output message="tns:sayHiResponse" name="sayHiResponse">
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="HelloWorldSoapBinding" type="tns:HelloWorldPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="sayHi">
+			<soap:operation soapAction="" style="document"/>
+			<wsdl:input name="sayHi">
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output name="sayHiResponse">
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="HelloWorld">
+		<wsdl:port binding="tns:HelloWorldSoapBinding" name="HelloWorldPort">
+			<soap:address location="http://localhost:8081/HelloWorldService"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

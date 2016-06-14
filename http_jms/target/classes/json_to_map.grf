@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="akuchan" created="Thu Apr 09 09:54:01 IST 2015" description="JSON To Map" guiVersion="3.4.4.P" id="1428560050073" licenseCode="Unlicensed" licenseType="Unknown" modified="Thu Apr 09 09:54:01 IST 2015" modifiedBy="akuchan" name="JSON_To_Map" preview-file="${Project_Home}/src/main/resources/info.json" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/Map" _dataStructure="OBJECT" _id="__id" _type="Output" id="bcd6cdfb-aceb-49c3-bf80-ae7dee6e8c88">
+<Record fieldDelimiter="," name="Map" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __implementationClass="java.lang.String" __index="0" __sourcePath="{}/Map/country" containerType="SINGLE" label="country" name="country" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Input" id="a3740529-9f80-49a9-9198-b12affe9d57d">
+<Record fieldDelimiter="," name="object" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{}/object/country" containerType="SINGLE" label="country" name="country" type="string"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+<Entry dictval.__javaType="java.lang.String" id="DictionaryEntry2" input="false" name="country" output="true" type="string"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Foreach 'object' -&gt; 'Map'" guiX="460" guiY="20" id="FOREACH_OBJECT_MAP" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = input.__id;
+//END -> DO NOT REMOVE
+output.country = input.country;
+outputArguments.country = input.country;]]></attr>
+</Node>
+<Node charset="UTF-8" enabled="enabled" fileURL="dict:inputPayload" guiName="JSON READER" guiX="20" guiY="20" id="JSON_READER0" type="JSON_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context xpath="/root">
+  <Context outPort="0" sequenceField="__id" xpath="object">
+    <Mapping cloverField="country" trim="true" xpath="country"/>
+  </Context>
+</Context>
+]]></attr>
+<attr name="__isJsonSchema"><![CDATA[false]]></attr>
+<attr name="_data_format"><![CDATA[JSON]]></attr>
+<attr name="jsonSchemaURL"><![CDATA[./src/main/resources/info.json]]></attr>
+</Node>
+<Node cacheInMemory="true" enabled="enabled" fileURL="dict:outputPayload" guiName="Map&lt;k,v&gt; WRITER" guiX="900" guiY="20" id="MAP_WRITER0" type="MAP_WRITER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<Map xmlns:clover="http://www.cloveretl.com/ns/xmlmapping" clover:inPort="0">
+  <country clover:dataType="java.lang.String">$0.country</country>
+</Map>]]></attr>
+<attr name="_data_format"><![CDATA[MAP]]></attr>
+<attr name="__metadata"><![CDATA[true]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="FOREACH_OBJECT_MAP:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="bcd6cdfb-aceb-49c3-bf80-ae7dee6e8c88" outPort="Port 0 (out)" toNode="MAP_WRITER0:0"/>
+<Edge debugMode="true" fromNode="JSON_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="a3740529-9f80-49a9-9198-b12affe9d57d" outPort="Port 0 (out)" toNode="FOREACH_OBJECT_MAP:0"/>
+</Phase>
+</Graph>

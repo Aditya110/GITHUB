@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:json="http://www.mulesoft.org/schema/mule/json" xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:spring="http://www.springframework.org/schema/beans" version="EE-3.5.2"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-current.xsd
+http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/json/current/mule-json.xsd">
+    <file:connector name="File" readFromDirectory="C:\Users\kmattupalli\Desktop\sales" workFileNamePattern=".json" autoDelete="false" streaming="true" validateConnections="true" doc:name="File"/>
+    <file:connector name="File1" readFromDirectory="C:\Users\kmattupalli\Desktop" workFileNamePattern="template.html" autoDelete="false" streaming="true" validateConnections="true" doc:name="File"/>
+    <flow name="jsonwithemailFlow1" doc:name="jsonwithemailFlow1">
+        <http:inbound-endpoint exchange-pattern="request-response" host="localhost" port="8081" doc:name="HTTP"/>
+        <byte-array-to-string-transformer doc:name="Byte Array to String"/>
+        <set-variable variableName="emailTemplate" value="&quot;#[payload]&quot;" doc:name="Variable"/>
+        <set-variable variableName="name" value="&quot;#[message.inboundProperties['http.query.params']['name']]&quot;" doc:name="Variable"/>
+        <set-payload value="{&quot;name&quot; : #[flowVars['name']],&quot;template&quot; : #[flowVars['emailTemplate']]}" doc:name="Set Payload"/>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+    </flow>
+</mule>

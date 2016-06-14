@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="akuchan" created="Mon Apr 06 09:56:33 IST 2015" description="JSON To Map" guiVersion="3.4.4.P" id="1428319974114" licenseCode="Unlicensed" licenseType="Unknown" modified="Mon Apr 06 09:56:33 IST 2015" modifiedBy="akuchan" name="JSON_To_Map" preview-file="${Project_Home}/src/main/resources/output.json" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Input" id="0748bd37-7ba7-45ae-b12d-4fa539796b82">
+<Record fieldDelimiter="," name="object" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{}/object/getWorkOrderDataResponse/description" containerType="SINGLE" label="description" name="description" type="string"/>
+<Field __index="1" __sourcePath="{}/object/getWorkOrderDataResponse/copyright" containerType="SINGLE" label="copyright" name="copyright" type="string"/>
+<Field __index="2" __sourcePath="{}/object/getWorkOrderDataResponse/date_x005fprocessed" containerType="SINGLE" label="date_processed" name="date_processed" type="string"/>
+<Field __index="3" __sourcePath="{}/object/getWorkOrderDataResponse/request_x005furl" containerType="SINGLE" label="request_url" name="request_url" type="string"/>
+<Field __index="4" __sourcePath="{}/object/getWorkOrderDataResponse/response/service_x005fname" containerType="SINGLE" label="service_name" name="service_name" type="string"/>
+<Field __index="5" __sourcePath="{}/object/getWorkOrderDataResponse/response/file_x005ftype" containerType="SINGLE" label="file_type" name="file_type" type="string"/>
+<Field __index="6" __sourcePath="{}/object/getWorkOrderDataResponse/client/name" containerType="SINGLE" label="name" name="name" type="string"/>
+<Field __index="7" __sourcePath="{}/object/getWorkOrderDataResponse/client/client_x005fid" containerType="SINGLE" label="client_id" name="client_id" type="string"/>
+<Field __index="8" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005fstatus" containerType="SINGLE" label="wo_status" name="wo_status" type="string"/>
+<Field __index="9" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005fcreate_x005fdate" containerType="SINGLE" label="wo_create_date" name="wo_create_date" type="string"/>
+<Field __index="10" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forder_x005fnumber" containerType="SINGLE" label="work_order_number" name="work_order_number" type="string"/>
+<Field __index="11" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fasset_x005fdetail" containerType="SINGLE" label="include_asset_detail" name="include_asset_detail" type="string"/>
+<Field __index="12" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fsite_x005fdetail" containerType="SINGLE" label="include_site_detail" name="include_site_detail" type="string"/>
+<Field __index="13" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fppm_x005fwo" containerType="SINGLE" label="include_ppm_wo" name="include_ppm_wo" type="string"/>
+<Field __index="14" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fppm_x005factivities" containerType="SINGLE" label="include_ppm_activities" name="include_ppm_activities" type="string"/>
+<Field __index="15" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fsla_x005fdates" containerType="SINGLE" label="include_sla_dates" name="include_sla_dates" type="string"/>
+<Field __index="16" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fwork_x005fpermissions" containerType="SINGLE" label="include_work_permissions" name="include_work_permissions" type="string"/>
+<Field __index="17" __sourcePath="{}/object/getWorkOrderDataResponse/client/provider_x005fname" containerType="SINGLE" label="provider_name" name="provider_name" type="string"/>
+<Field __index="18" __sourcePath="{}/object/getWorkOrderDataResponse/client/provider_x005ftype" containerType="SINGLE" label="provider_type" name="provider_type" type="string"/>
+<Field __index="19" __sourcePath="{}/object/getWorkOrderDataResponse/client/contract_x005ftype" containerType="SINGLE" label="contract_type" name="contract_type" type="string"/>
+<Field __index="20" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005fcancel_x005fdate" containerType="SINGLE" label="wo_cancel_date" name="wo_cancel_date" type="string"/>
+<Field __index="21" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005freassign_x005fdate" containerType="SINGLE" label="wo_reassign_date" name="wo_reassign_date" type="string"/>
+<Field __index="22" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005feol_x005fdate" containerType="SINGLE" label="wo_eol_date" name="wo_eol_date" type="string"/>
+<Field __index="23" __sourcePath="{}/object/getWorkOrderDataResponse/client/timezone" containerType="SINGLE" label="timezone" name="timezone" type="string"/>
+<Field __index="87" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005ffooter/record_x005fcount" containerType="SINGLE" label="record_count" name="record_count" type="string"/>
+<Field __index="88" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005ffooter/total_x005fmillis" containerType="SINGLE" label="total_millis" name="total_millis" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Output" id="17d622ef-f538-4083-9e6d-b8e3a785ed34">
+<Record fieldDelimiter="," name="object" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="7" __sourcePath="{}/object/getWorkOrderDataResponse/client/client_x005fid" containerType="SINGLE" label="client_id" name="client_id" type="string"/>
+<Field __index="19" __sourcePath="{}/object/getWorkOrderDataResponse/client/contract_x005ftype" containerType="SINGLE" label="contract_type" name="contract_type" type="string"/>
+<Field __index="11" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fasset_x005fdetail" containerType="SINGLE" label="include_asset_detail" name="include_asset_detail" type="string"/>
+<Field __index="14" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fppm_x005factivities" containerType="SINGLE" label="include_ppm_activities" name="include_ppm_activities" type="string"/>
+<Field __index="13" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fppm_x005fwo" containerType="SINGLE" label="include_ppm_wo" name="include_ppm_wo" type="string"/>
+<Field __index="12" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fsite_x005fdetail" containerType="SINGLE" label="include_site_detail" name="include_site_detail" type="string"/>
+<Field __index="15" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fsla_x005fdates" containerType="SINGLE" label="include_sla_dates" name="include_sla_dates" type="string"/>
+<Field __index="16" __sourcePath="{}/object/getWorkOrderDataResponse/client/include_x005fwork_x005fpermissions" containerType="SINGLE" label="include_work_permissions" name="include_work_permissions" type="string"/>
+<Field __index="6" __sourcePath="{}/object/getWorkOrderDataResponse/client/name" containerType="SINGLE" label="name" name="name" type="string"/>
+<Field __index="17" __sourcePath="{}/object/getWorkOrderDataResponse/client/provider_x005fname" containerType="SINGLE" label="provider_name" name="provider_name" type="string"/>
+<Field __index="18" __sourcePath="{}/object/getWorkOrderDataResponse/client/provider_x005ftype" containerType="SINGLE" label="provider_type" name="provider_type" type="string"/>
+<Field __index="23" __sourcePath="{}/object/getWorkOrderDataResponse/client/timezone" containerType="SINGLE" label="timezone" name="timezone" type="string"/>
+<Field __index="20" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005fcancel_x005fdate" containerType="SINGLE" label="wo_cancel_date" name="wo_cancel_date" type="string"/>
+<Field __index="9" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005fcreate_x005fdate" containerType="SINGLE" label="wo_create_date" name="wo_create_date" type="string"/>
+<Field __index="22" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005feol_x005fdate" containerType="SINGLE" label="wo_eol_date" name="wo_eol_date" type="string"/>
+<Field __index="24" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005ffooter/record_x005fcount" containerType="SINGLE" label="record_count" name="record_count" type="string"/>
+<Field __index="25" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005ffooter/total_x005fmillis" containerType="SINGLE" label="total_millis" name="total_millis" type="string"/>
+<Field __index="21" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005freassign_x005fdate" containerType="SINGLE" label="wo_reassign_date" name="wo_reassign_date" type="string"/>
+<Field __index="8" __sourcePath="{}/object/getWorkOrderDataResponse/client/wo_x005fstatus" containerType="SINGLE" label="wo_status" name="wo_status" type="string"/>
+<Field __index="10" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forder_x005fnumber" containerType="SINGLE" label="work_order_number" name="work_order_number" type="string"/>
+<Field __index="1" __sourcePath="{}/object/getWorkOrderDataResponse/copyright" containerType="SINGLE" label="copyright" name="copyright" type="string"/>
+<Field __index="2" __sourcePath="{}/object/getWorkOrderDataResponse/date_x005fprocessed" containerType="SINGLE" label="date_processed" name="date_processed" type="string"/>
+<Field __index="0" __sourcePath="{}/object/getWorkOrderDataResponse/description" containerType="SINGLE" label="description" name="description" type="string"/>
+<Field __index="3" __sourcePath="{}/object/getWorkOrderDataResponse/request_x005furl" containerType="SINGLE" label="request_url" name="request_url" type="string"/>
+<Field __index="5" __sourcePath="{}/object/getWorkOrderDataResponse/response/file_x005ftype" containerType="SINGLE" label="file_type" name="file_type" type="string"/>
+<Field __index="4" __sourcePath="{}/object/getWorkOrderDataResponse/response/service_x005fname" containerType="SINGLE" label="service_name" name="service_name" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="24" __referenceCounter="1" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="0748bd37-7ba7-45ae-b12d-4fa539796b82" _parent_id="__parent_id" _type="Input" id="abd5e8b6-762a-4490-81c8-d2ab42c3ae1b">
+<Record fieldDelimiter="," name="wo" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="24" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/work_x005forder_x005fnumber" containerType="SINGLE" label="work_order_number" name="work_order_number" type="string"/>
+<Field __index="25" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/date_x005fcreated" containerType="SINGLE" label="date_created" name="date_created" type="string"/>
+<Field __index="26" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/created_x005fby" containerType="SINGLE" label="created_by" name="created_by" type="string"/>
+<Field __index="27" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/created_x005fby_x005flogin_x005fid" containerType="SINGLE" label="created_by_login_id" name="created_by_login_id" type="string"/>
+<Field __index="28" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/date_x005fmodified" containerType="SINGLE" label="date_modified" name="date_modified" type="string"/>
+<Field __index="29" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/modified_x005fby" containerType="SINGLE" label="modified_by" name="modified_by" type="string"/>
+<Field __index="30" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/modified_x005fby_x005flogin_x005fid" containerType="SINGLE" label="modified_by_login_id" name="modified_by_login_id" type="string"/>
+<Field __index="31" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/created_x005fby_x005frole" containerType="SINGLE" label="created_by_role" name="created_by_role" type="string"/>
+<Field __index="32" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/site_x005fname" containerType="SINGLE" label="site_name" name="site_name" type="string"/>
+<Field __index="33" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/problem_x005fdescription" containerType="SINGLE" label="problem_description" name="problem_description" type="string"/>
+<Field __index="34" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/category" containerType="SINGLE" label="category" name="category" type="string"/>
+<Field __index="35" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/subcategory" containerType="SINGLE" label="subcategory" name="subcategory" type="string"/>
+<Field __index="36" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/problem_x005ftype" containerType="SINGLE" label="problem_type" name="problem_type" type="string"/>
+<Field __index="37" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/workorder_x005ftype" containerType="SINGLE" label="workorder_type" name="workorder_type" type="string"/>
+<Field __index="38" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/wo_x005ftype" containerType="SINGLE" label="wo_type" name="wo_type" type="string"/>
+<Field __index="39" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/location" containerType="SINGLE" label="location" name="location" type="string"/>
+<Field __index="40" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/equip_x005flocation_x005fcomments" containerType="SINGLE" label="equip_location_comments" name="equip_location_comments" type="string"/>
+<Field __index="41" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/contract_x005ftype" containerType="SINGLE" label="contract_type" name="contract_type" type="string"/>
+<Field __index="42" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/work_x005fpermission_x005frequired" containerType="SINGLE" label="work_permission_required" name="work_permission_required" type="string"/>
+<Field __index="43" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/provider_x005fname" containerType="SINGLE" label="provider_name" name="provider_name" type="string"/>
+<Field __index="44" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/requester_x005fname" containerType="SINGLE" label="requester_name" name="requester_name" type="string"/>
+<Field __index="45" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/call_x005fback_x005fnumber" containerType="SINGLE" label="call_back_number" name="call_back_number" type="string"/>
+<Field __index="46" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/temporary_x005ffix" containerType="SINGLE" label="temporary_fix" name="temporary_fix" type="string"/>
+<Field __index="47" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/temp_x005ffix_x005festimate" containerType="SINGLE" label="temp_fix_estimate" name="temp_fix_estimate" type="string"/>
+<Field __index="48" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/wo_x005fstatus" containerType="SINGLE" label="wo_status" name="wo_status" type="string"/>
+<Field __index="49" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/technician_x005fcomments" containerType="SINGLE" label="technician_comments" name="technician_comments" type="string"/>
+<Field __index="50" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/fault" containerType="SINGLE" label="fault" name="fault" type="string"/>
+<Field __index="51" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/action" containerType="SINGLE" label="action" name="action" type="string"/>
+<Field __index="52" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/provider_x005ftype" containerType="SINGLE" label="provider_type" name="provider_type" type="string"/>
+<Field __index="53" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/operational_x005fstatus" containerType="SINGLE" label="operational_status" name="operational_status" type="string"/>
+<Field __index="54" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/latest_x005fnote" containerType="SINGLE" label="latest_note" name="latest_note" type="string"/>
+<Field __index="55" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/latest_x005finbound_x005fcall" containerType="SINGLE" label="latest_inbound_call" name="latest_inbound_call" type="string"/>
+<Field __index="56" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/latest_x005foutbound_x005fcall" containerType="SINGLE" label="latest_outbound_call" name="latest_outbound_call" type="string"/>
+<Field __index="57" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/is_x005frecalled" containerType="SINGLE" label="is_recalled" name="is_recalled" type="string"/>
+<Field __index="58" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005frecalled_x005fby" containerType="SINGLE" label="last_recalled_by" name="last_recalled_by" type="string"/>
+<Field __index="59" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005frecalled_x005fby_x005flogin" containerType="SINGLE" label="last_recalled_by_login" name="last_recalled_by_login" type="string"/>
+<Field __index="60" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005frecalled_x005freason" containerType="SINGLE" label="last_recalled_reason" name="last_recalled_reason" type="string"/>
+<Field __index="61" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005frecalled_x005fcomment" containerType="SINGLE" label="last_recalled_comment" name="last_recalled_comment" type="string"/>
+<Field __index="62" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005frecall_x005fdate" containerType="SINGLE" label="last_recall_date" name="last_recall_date" type="string"/>
+<Field __index="63" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fescalated_x005fby" containerType="SINGLE" label="last_escalated_by" name="last_escalated_by" type="string"/>
+<Field __index="64" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fescalated_x005fby_x005flogin" containerType="SINGLE" label="last_escalated_by_login" name="last_escalated_by_login" type="string"/>
+<Field __index="65" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fescalation_x005fcomment" containerType="SINGLE" label="last_escalation_comment" name="last_escalation_comment" type="string"/>
+<Field __index="66" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fescalation_x005freason" containerType="SINGLE" label="last_escalation_reason" name="last_escalation_reason" type="string"/>
+<Field __index="67" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fescalation_x005fdate" containerType="SINGLE" label="last_escalation_date" name="last_escalation_date" type="string"/>
+<Field __index="68" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fpause_x005fdate" containerType="SINGLE" label="last_pause_date" name="last_pause_date" type="string"/>
+<Field __index="69" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fpaused_x005fby" containerType="SINGLE" label="last_paused_by" name="last_paused_by" type="string"/>
+<Field __index="70" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fpaused_x005fby_x005flogin" containerType="SINGLE" label="last_paused_by_login" name="last_paused_by_login" type="string"/>
+<Field __index="71" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fpaused_x005fcomment" containerType="SINGLE" label="last_paused_comment" name="last_paused_comment" type="string"/>
+<Field __index="72" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fpaused_x005freason" containerType="SINGLE" label="last_paused_reason" name="last_paused_reason" type="string"/>
+<Field __index="73" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fstart_x005fdate" containerType="SINGLE" label="last_start_date" name="last_start_date" type="string"/>
+<Field __index="74" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fstarted_x005fby" containerType="SINGLE" label="last_started_by" name="last_started_by" type="string"/>
+<Field __index="75" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fstarted_x005fby_x005flogin" containerType="SINGLE" label="last_started_by_login" name="last_started_by_login" type="string"/>
+<Field __index="76" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/date_x005fassigned" containerType="SINGLE" label="date_assigned" name="date_assigned" type="string"/>
+<Field __index="77" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/eta" containerType="SINGLE" label="eta" name="eta" type="string"/>
+<Field __index="78" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/technician_x005flogin" containerType="SINGLE" label="technician_login" name="technician_login" type="string"/>
+<Field __index="79" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/technician_x005fname" containerType="SINGLE" label="technician_name" name="technician_name" type="string"/>
+<Field __index="80" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/date_x005fservice_x005fcompleted" containerType="SINGLE" label="date_service_completed" name="date_service_completed" type="string"/>
+<Field __index="81" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fcompleted_x005fby" containerType="SINGLE" label="last_completed_by" name="last_completed_by" type="string"/>
+<Field __index="82" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fcompleted_x005fby_x005flogin" containerType="SINGLE" label="last_completed_by_login" name="last_completed_by_login" type="string"/>
+<Field __index="83" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/client_x005freference" containerType="SINGLE" label="client_reference" name="client_reference" type="string"/>
+<Field __index="84" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/provider_x005finvoice_x005fnumber" containerType="SINGLE" label="provider_invoice_number" name="provider_invoice_number" type="string"/>
+<Field __index="85" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/client_x005faccount_x005fcode" containerType="SINGLE" label="client_account_code" name="client_account_code" type="string"/>
+<Field __index="86" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/client_x005faccount_x005fdescription" containerType="SINGLE" label="client_account_description" name="client_account_description" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="26" __referenceCounter="1" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _metadataParentId="17d622ef-f538-4083-9e6d-b8e3a785ed34" _parent_id="__parent_id" _type="Output" id="3c87ff3d-4721-4c38-9e3f-2ca58acb2c5f">
+<Record fieldDelimiter="," name="wo" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __artificialType="_parent_id" __systemManaged="true" name="__parent_id" type="string"/>
+<Field __index="53" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/action" containerType="SINGLE" label="action" name="action" type="string"/>
+<Field __index="47" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/call_x005fback_x005fnumber" containerType="SINGLE" label="call_back_number" name="call_back_number" type="string"/>
+<Field __index="36" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/category" containerType="SINGLE" label="category" name="category" type="string"/>
+<Field __index="87" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/client_x005faccount_x005fcode" containerType="SINGLE" label="client_account_code" name="client_account_code" type="string"/>
+<Field __index="88" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/client_x005faccount_x005fdescription" containerType="SINGLE" label="client_account_description" name="client_account_description" type="string"/>
+<Field __index="85" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/client_x005freference" containerType="SINGLE" label="client_reference" name="client_reference" type="string"/>
+<Field __index="43" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/contract_x005ftype" containerType="SINGLE" label="contract_type" name="contract_type" type="string"/>
+<Field __index="28" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/created_x005fby" containerType="SINGLE" label="created_by" name="created_by" type="string"/>
+<Field __index="29" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/created_x005fby_x005flogin_x005fid" containerType="SINGLE" label="created_by_login_id" name="created_by_login_id" type="string"/>
+<Field __index="33" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/created_x005fby_x005frole" containerType="SINGLE" label="created_by_role" name="created_by_role" type="string"/>
+<Field __index="78" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/date_x005fassigned" containerType="SINGLE" label="date_assigned" name="date_assigned" type="string"/>
+<Field __index="27" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/date_x005fcreated" containerType="SINGLE" label="date_created" name="date_created" type="string"/>
+<Field __index="30" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/date_x005fmodified" containerType="SINGLE" label="date_modified" name="date_modified" type="string"/>
+<Field __index="82" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/date_x005fservice_x005fcompleted" containerType="SINGLE" label="date_service_completed" name="date_service_completed" type="string"/>
+<Field __index="42" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/equip_x005flocation_x005fcomments" containerType="SINGLE" label="equip_location_comments" name="equip_location_comments" type="string"/>
+<Field __index="79" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/eta" containerType="SINGLE" label="eta" name="eta" type="string"/>
+<Field __index="52" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/fault" containerType="SINGLE" label="fault" name="fault" type="string"/>
+<Field __index="59" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/is_x005frecalled" containerType="SINGLE" label="is_recalled" name="is_recalled" type="string"/>
+<Field __index="83" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fcompleted_x005fby" containerType="SINGLE" label="last_completed_by" name="last_completed_by" type="string"/>
+<Field __index="84" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fcompleted_x005fby_x005flogin" containerType="SINGLE" label="last_completed_by_login" name="last_completed_by_login" type="string"/>
+<Field __index="65" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fescalated_x005fby" containerType="SINGLE" label="last_escalated_by" name="last_escalated_by" type="string"/>
+<Field __index="66" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fescalated_x005fby_x005flogin" containerType="SINGLE" label="last_escalated_by_login" name="last_escalated_by_login" type="string"/>
+<Field __index="67" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fescalation_x005fcomment" containerType="SINGLE" label="last_escalation_comment" name="last_escalation_comment" type="string"/>
+<Field __index="69" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fescalation_x005fdate" containerType="SINGLE" label="last_escalation_date" name="last_escalation_date" type="string"/>
+<Field __index="68" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fescalation_x005freason" containerType="SINGLE" label="last_escalation_reason" name="last_escalation_reason" type="string"/>
+<Field __index="70" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fpause_x005fdate" containerType="SINGLE" label="last_pause_date" name="last_pause_date" type="string"/>
+<Field __index="71" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fpaused_x005fby" containerType="SINGLE" label="last_paused_by" name="last_paused_by" type="string"/>
+<Field __index="72" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fpaused_x005fby_x005flogin" containerType="SINGLE" label="last_paused_by_login" name="last_paused_by_login" type="string"/>
+<Field __index="73" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fpaused_x005fcomment" containerType="SINGLE" label="last_paused_comment" name="last_paused_comment" type="string"/>
+<Field __index="74" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fpaused_x005freason" containerType="SINGLE" label="last_paused_reason" name="last_paused_reason" type="string"/>
+<Field __index="64" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005frecall_x005fdate" containerType="SINGLE" label="last_recall_date" name="last_recall_date" type="string"/>
+<Field __index="60" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005frecalled_x005fby" containerType="SINGLE" label="last_recalled_by" name="last_recalled_by" type="string"/>
+<Field __index="61" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005frecalled_x005fby_x005flogin" containerType="SINGLE" label="last_recalled_by_login" name="last_recalled_by_login" type="string"/>
+<Field __index="63" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005frecalled_x005fcomment" containerType="SINGLE" label="last_recalled_comment" name="last_recalled_comment" type="string"/>
+<Field __index="62" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005frecalled_x005freason" containerType="SINGLE" label="last_recalled_reason" name="last_recalled_reason" type="string"/>
+<Field __index="75" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fstart_x005fdate" containerType="SINGLE" label="last_start_date" name="last_start_date" type="string"/>
+<Field __index="76" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fstarted_x005fby" containerType="SINGLE" label="last_started_by" name="last_started_by" type="string"/>
+<Field __index="77" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/last_x005fstarted_x005fby_x005flogin" containerType="SINGLE" label="last_started_by_login" name="last_started_by_login" type="string"/>
+<Field __index="57" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/latest_x005finbound_x005fcall" containerType="SINGLE" label="latest_inbound_call" name="latest_inbound_call" type="string"/>
+<Field __index="56" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/latest_x005fnote" containerType="SINGLE" label="latest_note" name="latest_note" type="string"/>
+<Field __index="58" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/latest_x005foutbound_x005fcall" containerType="SINGLE" label="latest_outbound_call" name="latest_outbound_call" type="string"/>
+<Field __index="41" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/location" containerType="SINGLE" label="location" name="location" type="string"/>
+<Field __index="31" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/modified_x005fby" containerType="SINGLE" label="modified_by" name="modified_by" type="string"/>
+<Field __index="32" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/modified_x005fby_x005flogin_x005fid" containerType="SINGLE" label="modified_by_login_id" name="modified_by_login_id" type="string"/>
+<Field __index="55" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/operational_x005fstatus" containerType="SINGLE" label="operational_status" name="operational_status" type="string"/>
+<Field __index="35" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/problem_x005fdescription" containerType="SINGLE" label="problem_description" name="problem_description" type="string"/>
+<Field __index="38" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/problem_x005ftype" containerType="SINGLE" label="problem_type" name="problem_type" type="string"/>
+<Field __index="86" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/provider_x005finvoice_x005fnumber" containerType="SINGLE" label="provider_invoice_number" name="provider_invoice_number" type="string"/>
+<Field __index="45" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/provider_x005fname" containerType="SINGLE" label="provider_name" name="provider_name" type="string"/>
+<Field __index="54" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/provider_x005ftype" containerType="SINGLE" label="provider_type" name="provider_type" type="string"/>
+<Field __index="46" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/requester_x005fname" containerType="SINGLE" label="requester_name" name="requester_name" type="string"/>
+<Field __index="34" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/site_x005fname" containerType="SINGLE" label="site_name" name="site_name" type="string"/>
+<Field __index="37" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/subcategory" containerType="SINGLE" label="subcategory" name="subcategory" type="string"/>
+<Field __index="51" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/technician_x005fcomments" containerType="SINGLE" label="technician_comments" name="technician_comments" type="string"/>
+<Field __index="80" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/technician_x005flogin" containerType="SINGLE" label="technician_login" name="technician_login" type="string"/>
+<Field __index="81" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/technician_x005fname" containerType="SINGLE" label="technician_name" name="technician_name" type="string"/>
+<Field __index="49" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/temp_x005ffix_x005festimate" containerType="SINGLE" label="temp_fix_estimate" name="temp_fix_estimate" type="string"/>
+<Field __index="48" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/temporary_x005ffix" containerType="SINGLE" label="temporary_fix" name="temporary_fix" type="string"/>
+<Field __index="50" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/wo_x005fstatus" containerType="SINGLE" label="wo_status" name="wo_status" type="string"/>
+<Field __index="40" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/wo_x005ftype" containerType="SINGLE" label="wo_type" name="wo_type" type="string"/>
+<Field __index="26" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/work_x005forder_x005fnumber" containerType="SINGLE" label="work_order_number" name="work_order_number" type="string"/>
+<Field __index="44" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/work_x005fpermission_x005frequired" containerType="SINGLE" label="work_permission_required" name="work_permission_required" type="string"/>
+<Field __index="39" __sourcePath="{}/object/getWorkOrderDataResponse/client/work_x005forders/wo/workorder_x005ftype" containerType="SINGLE" label="workorder_type" name="workorder_type" type="string"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Foreach 'object' -&gt; 'object'" guiX="460" guiY="20" id="FOREACH_OBJECT_OBJECT" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = input.__id;
+//END -> DO NOT REMOVE
+output.description = input.description;
+output.copyright = input.copyright;
+output.date_processed = input.date_processed;
+output.request_url = input.request_url;
+output.service_name = input.service_name;
+output.file_type = input.file_type;
+output.name = input.name;
+output.client_id = input.client_id;
+output.wo_status = input.wo_status;
+output.wo_create_date = input.wo_create_date;
+output.work_order_number = input.work_order_number;
+output.include_asset_detail = input.include_asset_detail;
+output.include_site_detail = input.include_site_detail;
+output.include_ppm_wo = input.include_ppm_wo;
+output.include_ppm_activities = input.include_ppm_activities;
+output.include_sla_dates = input.include_sla_dates;
+output.include_work_permissions = input.include_work_permissions;
+output.provider_name = input.provider_name;
+output.provider_type = input.provider_type;
+output.contract_type = input.contract_type;
+output.wo_cancel_date = input.wo_cancel_date;
+output.wo_reassign_date = input.wo_reassign_date;
+output.wo_eol_date = input.wo_eol_date;
+output.timezone = input.timezone;
+output.record_count = input.record_count;
+output.total_millis = input.total_millis;
+]]></attr>
+</Node>
+<Node enabled="enabled" guiName="Foreach 'wo' -&gt; 'wo'" guiX="460" guiY="120" id="FOREACH_WO_WO" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = input.__id;
+output.__parent_id = input.__parent_id;
+//END -> DO NOT REMOVE
+output.work_order_number = input.work_order_number;
+output.date_created = input.date_created;
+output.created_by = input.created_by;
+output.created_by_login_id = input.created_by_login_id;
+output.date_modified = input.date_modified;
+output.modified_by = input.modified_by;
+output.modified_by_login_id = input.modified_by_login_id;
+output.created_by_role = input.created_by_role;
+output.site_name = input.site_name;
+output.problem_description = input.problem_description;
+output.category = input.category;
+output.subcategory = input.subcategory;
+output.problem_type = input.problem_type;
+output.workorder_type = input.workorder_type;
+output.wo_type = input.wo_type;
+output.location = input.location;
+output.equip_location_comments = input.equip_location_comments;
+output.contract_type = input.contract_type;
+output.work_permission_required = input.work_permission_required;
+output.provider_name = input.provider_name;
+output.requester_name = input.requester_name;
+output.call_back_number = input.call_back_number;
+output.temporary_fix = input.temporary_fix;
+output.temp_fix_estimate = input.temp_fix_estimate;
+output.wo_status = input.wo_status;
+output.technician_comments = input.technician_comments;
+output.fault = input.fault;
+output.action = input.action;
+output.provider_type = input.provider_type;
+output.operational_status = input.operational_status;
+output.latest_note = input.latest_note;
+output.latest_inbound_call = input.latest_inbound_call;
+output.latest_outbound_call = input.latest_outbound_call;
+output.is_recalled = input.is_recalled;
+output.last_recalled_by = input.last_recalled_by;
+output.last_recalled_by_login = input.last_recalled_by_login;
+output.last_recalled_reason = input.last_recalled_reason;
+output.last_recalled_comment = input.last_recalled_comment;
+output.last_recall_date = input.last_recall_date;
+output.last_escalated_by = input.last_escalated_by;
+output.last_escalated_by_login = input.last_escalated_by_login;
+output.last_escalation_comment = input.last_escalation_comment;
+output.last_escalation_reason = input.last_escalation_reason;
+output.last_escalation_date = input.last_escalation_date;
+output.last_pause_date = input.last_pause_date;
+output.last_paused_by = input.last_paused_by;
+output.last_paused_by_login = input.last_paused_by_login;
+output.last_paused_comment = input.last_paused_comment;
+output.last_paused_reason = input.last_paused_reason;
+output.last_start_date = input.last_start_date;
+output.last_started_by = input.last_started_by;
+output.last_started_by_login = input.last_started_by_login;
+output.date_assigned = input.date_assigned;
+output.eta = input.eta;
+output.technician_login = input.technician_login;
+output.technician_name = input.technician_name;
+output.date_service_completed = input.date_service_completed;
+output.last_completed_by = input.last_completed_by;
+output.last_completed_by_login = input.last_completed_by_login;
+output.client_reference = input.client_reference;
+output.provider_invoice_number = input.provider_invoice_number;
+output.client_account_code = input.client_account_code;
+output.client_account_description = input.client_account_description;
+]]></attr>
+</Node>
+<Node charset="UTF-8" enabled="enabled" fileURL="dict:inputPayload" guiName="JSON READER" guiX="20" guiY="20" id="JSON_READER0" type="JSON_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context xpath="/root">
+  <Context outPort="0" sequenceField="__id" xpath="object">
+    <Mapping cloverField="description" trim="true" xpath="getWorkOrderDataResponse/description"/>
+    <Mapping cloverField="copyright" trim="true" xpath="getWorkOrderDataResponse/copyright"/>
+    <Mapping cloverField="date_processed" trim="true" xpath="getWorkOrderDataResponse/date_x005fprocessed"/>
+    <Mapping cloverField="request_url" trim="true" xpath="getWorkOrderDataResponse/request_x005furl"/>
+    <Mapping cloverField="service_name" trim="true" xpath="getWorkOrderDataResponse/response/service_x005fname"/>
+    <Mapping cloverField="file_type" trim="true" xpath="getWorkOrderDataResponse/response/file_x005ftype"/>
+    <Mapping cloverField="name" trim="true" xpath="getWorkOrderDataResponse/client/name"/>
+    <Mapping cloverField="client_id" trim="true" xpath="getWorkOrderDataResponse/client/client_x005fid"/>
+    <Mapping cloverField="wo_status" trim="true" xpath="getWorkOrderDataResponse/client/wo_x005fstatus"/>
+    <Mapping cloverField="wo_create_date" trim="true" xpath="getWorkOrderDataResponse/client/wo_x005fcreate_x005fdate"/>
+    <Mapping cloverField="work_order_number" trim="true" xpath="getWorkOrderDataResponse/client/work_x005forder_x005fnumber"/>
+    <Mapping cloverField="include_asset_detail" trim="true" xpath="getWorkOrderDataResponse/client/include_x005fasset_x005fdetail"/>
+    <Mapping cloverField="include_site_detail" trim="true" xpath="getWorkOrderDataResponse/client/include_x005fsite_x005fdetail"/>
+    <Mapping cloverField="include_ppm_wo" trim="true" xpath="getWorkOrderDataResponse/client/include_x005fppm_x005fwo"/>
+    <Mapping cloverField="include_ppm_activities" trim="true" xpath="getWorkOrderDataResponse/client/include_x005fppm_x005factivities"/>
+    <Mapping cloverField="include_sla_dates" trim="true" xpath="getWorkOrderDataResponse/client/include_x005fsla_x005fdates"/>
+    <Mapping cloverField="include_work_permissions" trim="true" xpath="getWorkOrderDataResponse/client/include_x005fwork_x005fpermissions"/>
+    <Mapping cloverField="provider_name" trim="true" xpath="getWorkOrderDataResponse/client/provider_x005fname"/>
+    <Mapping cloverField="provider_type" trim="true" xpath="getWorkOrderDataResponse/client/provider_x005ftype"/>
+    <Mapping cloverField="contract_type" trim="true" xpath="getWorkOrderDataResponse/client/contract_x005ftype"/>
+    <Mapping cloverField="wo_cancel_date" trim="true" xpath="getWorkOrderDataResponse/client/wo_x005fcancel_x005fdate"/>
+    <Mapping cloverField="wo_reassign_date" trim="true" xpath="getWorkOrderDataResponse/client/wo_x005freassign_x005fdate"/>
+    <Mapping cloverField="wo_eol_date" trim="true" xpath="getWorkOrderDataResponse/client/wo_x005feol_x005fdate"/>
+    <Mapping cloverField="timezone" trim="true" xpath="getWorkOrderDataResponse/client/timezone"/>
+    <Mapping cloverField="record_count" trim="true" xpath="getWorkOrderDataResponse/client/wo_x005ffooter/record_x005fcount"/>
+    <Mapping cloverField="total_millis" trim="true" xpath="getWorkOrderDataResponse/client/wo_x005ffooter/total_x005fmillis"/>
+    <Context generatedKey="__parent_id" outPort="1" parentKey="__id" sequenceField="__id" xpath="getWorkOrderDataResponse/client/work_x005forders/wo">
+      <Mapping cloverField="work_order_number" trim="true" xpath="work_x005forder_x005fnumber"/>
+      <Mapping cloverField="date_created" trim="true" xpath="date_x005fcreated"/>
+      <Mapping cloverField="created_by" trim="true" xpath="created_x005fby"/>
+      <Mapping cloverField="created_by_login_id" trim="true" xpath="created_x005fby_x005flogin_x005fid"/>
+      <Mapping cloverField="date_modified" trim="true" xpath="date_x005fmodified"/>
+      <Mapping cloverField="modified_by" trim="true" xpath="modified_x005fby"/>
+      <Mapping cloverField="modified_by_login_id" trim="true" xpath="modified_x005fby_x005flogin_x005fid"/>
+      <Mapping cloverField="created_by_role" trim="true" xpath="created_x005fby_x005frole"/>
+      <Mapping cloverField="site_name" trim="true" xpath="site_x005fname"/>
+      <Mapping cloverField="problem_description" trim="true" xpath="problem_x005fdescription"/>
+      <Mapping cloverField="category" trim="true" xpath="category"/>
+      <Mapping cloverField="subcategory" trim="true" xpath="subcategory"/>
+      <Mapping cloverField="problem_type" trim="true" xpath="problem_x005ftype"/>
+      <Mapping cloverField="workorder_type" trim="true" xpath="workorder_x005ftype"/>
+      <Mapping cloverField="wo_type" trim="true" xpath="wo_x005ftype"/>
+      <Mapping cloverField="location" trim="true" xpath="location"/>
+      <Mapping cloverField="equip_location_comments" trim="true" xpath="equip_x005flocation_x005fcomments"/>
+      <Mapping cloverField="contract_type" trim="true" xpath="contract_x005ftype"/>
+      <Mapping cloverField="work_permission_required" trim="true" xpath="work_x005fpermission_x005frequired"/>
+      <Mapping cloverField="provider_name" trim="true" xpath="provider_x005fname"/>
+      <Mapping cloverField="requester_name" trim="true" xpath="requester_x005fname"/>
+      <Mapping cloverField="call_back_number" trim="true" xpath="call_x005fback_x005fnumber"/>
+      <Mapping cloverField="temporary_fix" trim="true" xpath="temporary_x005ffix"/>
+      <Mapping cloverField="temp_fix_estimate" trim="true" xpath="temp_x005ffix_x005festimate"/>
+      <Mapping cloverField="wo_status" trim="true" xpath="wo_x005fstatus"/>
+      <Mapping cloverField="technician_comments" trim="true" xpath="technician_x005fcomments"/>
+      <Mapping cloverField="fault" trim="true" xpath="fault"/>
+      <Mapping cloverField="action" trim="true" xpath="action"/>
+      <Mapping cloverField="provider_type" trim="true" xpath="provider_x005ftype"/>
+      <Mapping cloverField="operational_status" trim="true" xpath="operational_x005fstatus"/>
+      <Mapping cloverField="latest_note" trim="true" xpath="latest_x005fnote"/>
+      <Mapping cloverField="latest_inbound_call" trim="true" xpath="latest_x005finbound_x005fcall"/>
+      <Mapping cloverField="latest_outbound_call" trim="true" xpath="latest_x005foutbound_x005fcall"/>
+      <Mapping cloverField="is_recalled" trim="true" xpath="is_x005frecalled"/>
+      <Mapping cloverField="last_recalled_by" trim="true" xpath="last_x005frecalled_x005fby"/>
+      <Mapping cloverField="last_recalled_by_login" trim="true" xpath="last_x005frecalled_x005fby_x005flogin"/>
+      <Mapping cloverField="last_recalled_reason" trim="true" xpath="last_x005frecalled_x005freason"/>
+      <Mapping cloverField="last_recalled_comment" trim="true" xpath="last_x005frecalled_x005fcomment"/>
+      <Mapping cloverField="last_recall_date" trim="true" xpath="last_x005frecall_x005fdate"/>
+      <Mapping cloverField="last_escalated_by" trim="true" xpath="last_x005fescalated_x005fby"/>
+      <Mapping cloverField="last_escalated_by_login" trim="true" xpath="last_x005fescalated_x005fby_x005flogin"/>
+      <Mapping cloverField="last_escalation_comment" trim="true" xpath="last_x005fescalation_x005fcomment"/>
+      <Mapping cloverField="last_escalation_reason" trim="true" xpath="last_x005fescalation_x005freason"/>
+      <Mapping cloverField="last_escalation_date" trim="true" xpath="last_x005fescalation_x005fdate"/>
+      <Mapping cloverField="last_pause_date" trim="true" xpath="last_x005fpause_x005fdate"/>
+      <Mapping cloverField="last_paused_by" trim="true" xpath="last_x005fpaused_x005fby"/>
+      <Mapping cloverField="last_paused_by_login" trim="true" xpath="last_x005fpaused_x005fby_x005flogin"/>
+      <Mapping cloverField="last_paused_comment" trim="true" xpath="last_x005fpaused_x005fcomment"/>
+      <Mapping cloverField="last_paused_reason" trim="true" xpath="last_x005fpaused_x005freason"/>
+      <Mapping cloverField="last_start_date" trim="true" xpath="last_x005fstart_x005fdate"/>
+      <Mapping cloverField="last_started_by" trim="true" xpath="last_x005fstarted_x005fby"/>
+      <Mapping cloverField="last_started_by_login" trim="true" xpath="last_x005fstarted_x005fby_x005flogin"/>
+      <Mapping cloverField="date_assigned" trim="true" xpath="date_x005fassigned"/>
+      <Mapping cloverField="eta" trim="true" xpath="eta"/>
+      <Mapping cloverField="technician_login" trim="true" xpath="technician_x005flogin"/>
+      <Mapping cloverField="technician_name" trim="true" xpath="technician_x005fname"/>
+      <Mapping cloverField="date_service_completed" trim="true" xpath="date_x005fservice_x005fcompleted"/>
+      <Mapping cloverField="last_completed_by" trim="true" xpath="last_x005fcompleted_x005fby"/>
+      <Mapping cloverField="last_completed_by_login" trim="true" xpath="last_x005fcompleted_x005fby_x005flogin"/>
+      <Mapping cloverField="client_reference" trim="true" xpath="client_x005freference"/>
+      <Mapping cloverField="provider_invoice_number" trim="true" xpath="provider_x005finvoice_x005fnumber"/>
+      <Mapping cloverField="client_account_code" trim="true" xpath="client_x005faccount_x005fcode"/>
+      <Mapping cloverField="client_account_description" trim="true" xpath="client_x005faccount_x005fdescription"/>
+    </Context>
+  </Context>
+</Context>
+]]></attr>
+<attr name="__isJsonSchema"><![CDATA[false]]></attr>
+<attr name="_data_format"><![CDATA[JSON]]></attr>
+<attr name="jsonSchemaURL"><![CDATA[./src/main/resources/output.json]]></attr>
+</Node>
+<Node cacheInMemory="true" enabled="enabled" fileURL="dict:outputPayload" guiName="Map&lt;k,v&gt; WRITER" guiX="900" guiY="20" id="MAP_WRITER0" type="MAP_WRITER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<object xmlns:clover="http://www.cloveretl.com/ns/xmlmapping" clover:inPort="0">
+  <getWorkOrderDataResponse>
+    <description>$0.description</description>
+    <copyright>$0.copyright</copyright>
+    <clover:element clover:name="date_processed">$0.date_processed</clover:element>
+    <clover:element clover:name="request_url">$0.request_url</clover:element>
+    <response>
+      <clover:element clover:name="service_name">$0.service_name</clover:element>
+      <clover:element clover:name="file_type">$0.file_type</clover:element>
+    </response>
+    <client>
+      <name>$0.name</name>
+      <clover:element clover:name="client_id">$0.client_id</clover:element>
+      <clover:element clover:name="wo_status">$0.wo_status</clover:element>
+      <clover:element clover:name="wo_create_date">$0.wo_create_date</clover:element>
+      <clover:element clover:name="work_order_number">$0.work_order_number</clover:element>
+      <clover:element clover:name="include_asset_detail">$0.include_asset_detail</clover:element>
+      <clover:element clover:name="include_site_detail">$0.include_site_detail</clover:element>
+      <clover:element clover:name="include_ppm_wo">$0.include_ppm_wo</clover:element>
+      <clover:element clover:name="include_ppm_activities">$0.include_ppm_activities</clover:element>
+      <clover:element clover:name="include_sla_dates">$0.include_sla_dates</clover:element>
+      <clover:element clover:name="include_work_permissions">$0.include_work_permissions</clover:element>
+      <clover:element clover:name="provider_name">$0.provider_name</clover:element>
+      <clover:element clover:name="provider_type">$0.provider_type</clover:element>
+      <clover:element clover:name="contract_type">$0.contract_type</clover:element>
+      <clover:element clover:name="wo_cancel_date">$0.wo_cancel_date</clover:element>
+      <clover:element clover:name="wo_reassign_date">$0.wo_reassign_date</clover:element>
+      <clover:element clover:name="wo_eol_date">$0.wo_eol_date</clover:element>
+      <timezone>$0.timezone</timezone>
+      <clover:element clover:name="wo_footer">
+        <clover:element clover:name="record_count">$0.record_count</clover:element>
+        <clover:element clover:name="total_millis">$0.total_millis</clover:element>
+      </clover:element>
+      <clover:element clover:name="work_orders">
+        <clover:collection clover:name="wo">
+          <item clover:inPort="1" clover:key="__parent_id" clover:parentKey="__id">
+            <clover:element clover:name="work_order_number">$1.work_order_number</clover:element>
+            <clover:element clover:name="date_created">$1.date_created</clover:element>
+            <clover:element clover:name="created_by">$1.created_by</clover:element>
+            <clover:element clover:name="created_by_login_id">$1.created_by_login_id</clover:element>
+            <clover:element clover:name="date_modified">$1.date_modified</clover:element>
+            <clover:element clover:name="modified_by">$1.modified_by</clover:element>
+            <clover:element clover:name="modified_by_login_id">$1.modified_by_login_id</clover:element>
+            <clover:element clover:name="created_by_role">$1.created_by_role</clover:element>
+            <clover:element clover:name="site_name">$1.site_name</clover:element>
+            <clover:element clover:name="problem_description">$1.problem_description</clover:element>
+            <category>$1.category</category>
+            <subcategory>$1.subcategory</subcategory>
+            <clover:element clover:name="problem_type">$1.problem_type</clover:element>
+            <clover:element clover:name="workorder_type">$1.workorder_type</clover:element>
+            <clover:element clover:name="wo_type">$1.wo_type</clover:element>
+            <location>$1.location</location>
+            <clover:element clover:name="equip_location_comments">$1.equip_location_comments</clover:element>
+            <clover:element clover:name="contract_type">$1.contract_type</clover:element>
+            <clover:element clover:name="work_permission_required">$1.work_permission_required</clover:element>
+            <clover:element clover:name="provider_name">$1.provider_name</clover:element>
+            <clover:element clover:name="requester_name">$1.requester_name</clover:element>
+            <clover:element clover:name="call_back_number">$1.call_back_number</clover:element>
+            <clover:element clover:name="temporary_fix">$1.temporary_fix</clover:element>
+            <clover:element clover:name="temp_fix_estimate">$1.temp_fix_estimate</clover:element>
+            <clover:element clover:name="wo_status">$1.wo_status</clover:element>
+            <clover:element clover:name="technician_comments">$1.technician_comments</clover:element>
+            <fault>$1.fault</fault>
+            <action>$1.action</action>
+            <clover:element clover:name="provider_type">$1.provider_type</clover:element>
+            <clover:element clover:name="operational_status">$1.operational_status</clover:element>
+            <clover:element clover:name="latest_note">$1.latest_note</clover:element>
+            <clover:element clover:name="latest_inbound_call">$1.latest_inbound_call</clover:element>
+            <clover:element clover:name="latest_outbound_call">$1.latest_outbound_call</clover:element>
+            <clover:element clover:name="is_recalled">$1.is_recalled</clover:element>
+            <clover:element clover:name="last_recalled_by">$1.last_recalled_by</clover:element>
+            <clover:element clover:name="last_recalled_by_login">$1.last_recalled_by_login</clover:element>
+            <clover:element clover:name="last_recalled_reason">$1.last_recalled_reason</clover:element>
+            <clover:element clover:name="last_recalled_comment">$1.last_recalled_comment</clover:element>
+            <clover:element clover:name="last_recall_date">$1.last_recall_date</clover:element>
+            <clover:element clover:name="last_escalated_by">$1.last_escalated_by</clover:element>
+            <clover:element clover:name="last_escalated_by_login">$1.last_escalated_by_login</clover:element>
+            <clover:element clover:name="last_escalation_comment">$1.last_escalation_comment</clover:element>
+            <clover:element clover:name="last_escalation_reason">$1.last_escalation_reason</clover:element>
+            <clover:element clover:name="last_escalation_date">$1.last_escalation_date</clover:element>
+            <clover:element clover:name="last_pause_date">$1.last_pause_date</clover:element>
+            <clover:element clover:name="last_paused_by">$1.last_paused_by</clover:element>
+            <clover:element clover:name="last_paused_by_login">$1.last_paused_by_login</clover:element>
+            <clover:element clover:name="last_paused_comment">$1.last_paused_comment</clover:element>
+            <clover:element clover:name="last_paused_reason">$1.last_paused_reason</clover:element>
+            <clover:element clover:name="last_start_date">$1.last_start_date</clover:element>
+            <clover:element clover:name="last_started_by">$1.last_started_by</clover:element>
+            <clover:element clover:name="last_started_by_login">$1.last_started_by_login</clover:element>
+            <clover:element clover:name="date_assigned">$1.date_assigned</clover:element>
+            <eta>$1.eta</eta>
+            <clover:element clover:name="technician_login">$1.technician_login</clover:element>
+            <clover:element clover:name="technician_name">$1.technician_name</clover:element>
+            <clover:element clover:name="date_service_completed">$1.date_service_completed</clover:element>
+            <clover:element clover:name="last_completed_by">$1.last_completed_by</clover:element>
+            <clover:element clover:name="last_completed_by_login">$1.last_completed_by_login</clover:element>
+            <clover:element clover:name="client_reference">$1.client_reference</clover:element>
+            <clover:element clover:name="provider_invoice_number">$1.provider_invoice_number</clover:element>
+            <clover:element clover:name="client_account_code">$1.client_account_code</clover:element>
+            <clover:element clover:name="client_account_description">$1.client_account_description</clover:element>
+          </item>
+        </clover:collection>
+      </clover:element>
+    </client>
+  </getWorkOrderDataResponse>
+</object>]]></attr>
+<attr name="_data_format"><![CDATA[MAP]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="FOREACH_OBJECT_OBJECT:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="17d622ef-f538-4083-9e6d-b8e3a785ed34" outPort="Port 0 (out)" toNode="MAP_WRITER0:0"/>
+<Edge debugMode="true" fromNode="FOREACH_WO_WO:0" guiBendpoints="" id="Edge3" inPort="Port 1 (in)" metadata="3c87ff3d-4721-4c38-9e3f-2ca58acb2c5f" outPort="Port 0 (out)" toNode="MAP_WRITER0:1"/>
+<Edge debugMode="true" fromNode="JSON_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="0748bd37-7ba7-45ae-b12d-4fa539796b82" outPort="Port 0 (out)" toNode="FOREACH_OBJECT_OBJECT:0"/>
+<Edge debugMode="true" fromNode="JSON_READER0:1" guiBendpoints="" id="Edge2" inPort="Port 0 (in)" metadata="abd5e8b6-762a-4490-81c8-d2ab42c3ae1b" outPort="Port 1 (out)" toNode="FOREACH_WO_WO:0"/>
+</Phase>
+</Graph>

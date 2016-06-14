@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="akuchan" created="Mon Mar 30 09:56:50 IST 2015" description="MS Excel To JSON" guiVersion="3.4.4.P" id="1427702486492" licenseCode="Unlicensed" licenseType="Unknown" modified="Mon Mar 30 09:56:50 IST 2015" modifiedBy="akuchan" name="MS_Excel_To_JSON" preview-file="C:/Users/akuchan/Desktop/input/input.xls" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __referenceCounter="1" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _type="Input" id="2a22db44-081d-4fb6-a035-1197fd94ea6c">
+<Record fieldDelimiter="," name="input" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __sourcePath="1/0" label="Name " name="Name" type="string"/>
+<Field __sourcePath="1/1" label="Address" name="Address" type="string"/>
+<Field __sourcePath="1/2" label="City" name="City" type="string"/>
+<Field __sourcePath="1/3" label="Pincode" name="Pincode" type="long"/>
+<Field __artificialType="_id" auto_filling="global_row_count" name="__id" type="long"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/input" _dataStructure="SINGLE_DIMENSIONAL_COLLECTION" _id="__id" _type="Output" id="7aa47eff-f827-4dc3-99e5-e335459bed50">
+<Record fieldDelimiter="," name="input" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="1" __sourcePath="{}/input/Address" containerType="SINGLE" label="Address" name="Address" type="string"/>
+<Field __index="2" __sourcePath="{}/input/City" containerType="SINGLE" label="City" name="City" type="string"/>
+<Field __index="0" __sourcePath="{}/input/Name_x0020" containerType="SINGLE" label="Name " name="Name" type="string"/>
+<Field __index="3" __sourcePath="{}/input/Pincode" containerType="SINGLE" label="Pincode" name="Pincode" type="long"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Foreach 'input' -&gt; 'input'" guiX="460" guiY="20" id="FOREACH_INPUT_INPUT" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = num2str(input.__id);
+//END -> DO NOT REMOVE
+output.Name = input.Name;
+output.Address = input.Address;
+output.City = input.City;
+output.Pincode = input.Pincode;
+]]></attr>
+</Node>
+<Node cacheInMemory="true" charset="UTF-8" enabled="enabled" fileURL="dict:outputPayload" guiName="JSON WRITER" guiX="900" guiY="20" id="JSON_WRITER0" type="JSON_WRITER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<clover:collection clover:name="input" xmlns:clover="http://www.cloveretl.com/ns/xmlmapping">
+  <item clover:inPort="0">
+    <clover:element clover:name="Name ">$0.Name</clover:element>
+    <Address>$0.Address</Address>
+    <City>$0.City</City>
+    <Pincode>$0.Pincode</Pincode>
+  </item>
+</clover:collection>]]></attr>
+<attr name="__isJsonSchema"><![CDATA[false]]></attr>
+<attr name="_data_format"><![CDATA[JSON]]></attr>
+</Node>
+<Node enabled="enabled" fileURL="dict:inputPayload" guiName="MS Excel READER" guiX="20" guiY="20" id="SPREADSHEET_READER0" type="SPREADSHEET_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<mapping>
+    <globalAttributes>
+        <orientation>VERTICAL</orientation>
+        <step>1</step>
+        <writeHeader>true</writeHeader>
+    </globalAttributes>
+    <defaultSkip>1</defaultSkip>
+    <headerGroups>
+        <headerGroup skip="1">
+            <cloverField>Name</cloverField>
+            <headerRanges>
+                <headerRange begin="A1"/>
+            </headerRanges>
+        </headerGroup>
+        <headerGroup skip="1">
+            <cloverField>Address</cloverField>
+            <headerRanges>
+                <headerRange begin="B1"/>
+            </headerRanges>
+        </headerGroup>
+        <headerGroup skip="1">
+            <cloverField>City</cloverField>
+            <headerRanges>
+                <headerRange begin="C1"/>
+            </headerRanges>
+        </headerGroup>
+        <headerGroup skip="1">
+            <cloverField>Pincode</cloverField>
+            <headerRanges>
+                <headerRange begin="D1"/>
+            </headerRanges>
+        </headerGroup>
+    </headerGroups>
+</mapping>
+]]></attr>
+<attr name="_data_format"><![CDATA[XLS]]></attr>
+<attr name="__dataSourceDefinition"><![CDATA[C:/Users/akuchan/Desktop/input/input.xls]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="FOREACH_INPUT_INPUT:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="7aa47eff-f827-4dc3-99e5-e335459bed50" outPort="Port 0 (out)" toNode="JSON_WRITER0:0"/>
+<Edge debugMode="true" fromNode="SPREADSHEET_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="2a22db44-081d-4fb6-a035-1197fd94ea6c" outPort="Port 0 (output)" toNode="FOREACH_INPUT_INPUT:0"/>
+</Phase>
+</Graph>

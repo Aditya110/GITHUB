@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="akuchan" created="Fri Mar 13 13:27:47 IST 2015" description="Xml&lt;sayHiResponse&gt; To JSON" guiVersion="3.4.4.P" id="1426236389532" licenseCode="Unlicensed" licenseType="Unknown" modified="Fri Mar 13 13:27:47 IST 2015" modifiedBy="akuchan" name="Xml_sayHiResponse__To_JSON" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __filteredMetadata="false" __index="0" __referenceCounter="1" __schemaType="{http://samplejax.se.mulesoft.com/}sayHiResponse" __sourcePath="{http://samplejax.se.mulesoft.com/=ns0}/ns0:sayHiResponse" _dataStructure="OBJECT" _id="__id" _type="Input" id="bac516d7-0b72-43be-90eb-c96475ac892d">
+<Record fieldDelimiter="," name="sayHiResponse" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __schemaType="{http://samplejax.se.mulesoft.com/}responseType" __sourcePath="{http://samplejax.se.mulesoft.com/=ns0}/ns0:sayHiResponse/return/EmpName" containerType="SINGLE" label="EmpName" name="EmpName" type="string"/>
+<Field __index="1" __schemaType="{http://samplejax.se.mulesoft.com/}responseType" __sourcePath="{http://samplejax.se.mulesoft.com/=ns0}/ns0:sayHiResponse/return/EmpId" containerType="SINGLE" label="EmpId" name="EmpId" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/sayHiResponse" _dataStructure="OBJECT" _id="__id" _type="Output" id="c13253b8-3776-41a4-aada-e4d8d2167cec">
+<Record fieldDelimiter="," name="sayHiResponse" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="1" __sourcePath="{}/sayHiResponse/return/EmpId" containerType="SINGLE" label="EmpId" name="EmpId" type="string"/>
+<Field __index="0" __sourcePath="{}/sayHiResponse/return/EmpName" containerType="SINGLE" label="EmpName" name="EmpName" type="string"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Foreach 'ns0:sayHiResponse' -&gt; 'sayHiResponse'" guiX="460" guiY="20" id="FOREACH_NS0_SAY_HI_RESPONSE_SAY_HI_RESPONSE" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = input.__id;
+//END -> DO NOT REMOVE
+output.EmpName = input.EmpName;
+output.EmpId = input.EmpId;
+]]></attr>
+</Node>
+<Node cacheInMemory="true" charset="UTF-8" enabled="enabled" fileURL="dict:outputPayload" guiName="JSON WRITER" guiX="900" guiY="20" id="JSON_WRITER0" type="JSON_WRITER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<sayHiResponse xmlns:clover="http://www.cloveretl.com/ns/xmlmapping" clover:inPort="0">
+  <return>
+    <EmpName>$0.EmpName</EmpName>
+    <EmpId>$0.EmpId</EmpId>
+  </return>
+</sayHiResponse>]]></attr>
+<attr name="__isJsonSchema"><![CDATA[false]]></attr>
+<attr name="_data_format"><![CDATA[JSON]]></attr>
+</Node>
+<Node charset="UTF-8" enabled="enabled" fileURL="dict:inputPayload" guiName="XML READER" guiX="20" guiY="20" id="XML_READER0" type="XML_READER">
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context namespacePaths="ns0=&quot;http://samplejax.se.mulesoft.com/&quot;" outPort="0" sequenceField="__id" xpath="/ns0:sayHiResponse">
+  <Mapping cloverField="EmpName" trim="true" xpath="return/EmpName"/>
+  <Mapping cloverField="EmpId" trim="true" xpath="return/EmpId"/>
+</Context>
+]]></attr>
+<attr name="_data_format"><![CDATA[XML]]></attr>
+<attr name="__metadata"><![CDATA[true]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="FOREACH_NS0_SAY_HI_RESPONSE_SAY_HI_RESPONSE:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="c13253b8-3776-41a4-aada-e4d8d2167cec" outPort="Port 0 (out)" toNode="JSON_WRITER0:0"/>
+<Edge debugMode="true" fromNode="XML_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="bac516d7-0b72-43be-90eb-c96475ac892d" outPort="Port 0 (out)" toNode="FOREACH_NS0_SAY_HI_RESPONSE_SAY_HI_RESPONSE:0"/>
+</Phase>
+</Graph>
